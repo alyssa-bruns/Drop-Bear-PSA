@@ -61,3 +61,47 @@ describe('GET api/v1/sightings/:id', async () => {
     expect(res.statusCode).toBe(500)
   })
 })
+
+describe('POST api/v1/sightings', () => {
+  it('should add a new sighting', async () => {
+    const newSighting = {
+      id: 4,
+      location: 'Kosciuszko National Park, New South Wales, Australia',
+      date: '2024-04-13',
+      time: '23:00:00',
+      description:
+        'Lost in my thoughts, I barely registered the faint rustle of leaves overhead. Then, with a sudden thud, a dark silhouette descended, landing mere inches from where I sat. My heart leaped into my throat as I locked eyes with the formidable creature before me - a drop bear, its sharp claws poised to strike. With trembling hands, I fumbled for my flashlight, the beam revealing its fearsome form. In a desperate bid for survival, I scrambled to my feet, the adrenaline surging through my veins as I dashed into the darkness, the echoes of its growls haunting my every step. It was a harrowing encounter that left me shaken to the core, a stark reminder of the unforgiving wilderness that lay beyond the safety of civilization.',
+      email: 'example4@email.com',
+      is_approved: true,
+    }
+
+    const addSightingSpy = vi.spyOn(sightingsDb, 'addSighting')
+
+    const res = await request(server)
+      .post('/api/v1/sightings')
+      .send(newSighting)
+
+    expect(res.statusCode).toBe(200)
+    expect(addSightingSpy).toHaveBeenLastCalledWith(newSighting)
+  })
+  it('should send an error message', async () => {
+    const newSighting = {
+      id: 4,
+      location: 'Kosciuszko National Park, New South Wales, Australia',
+      date: '2024-04-13',
+      time: '23:00:00',
+      description:
+        'Lost in my thoughts, I barely registered the faint rustle of leaves overhead. Then, with a sudden thud, a dark silhouette descended, landing mere inches from where I sat. My heart leaped into my throat as I locked eyes with the formidable creature before me - a drop bear, its sharp claws poised to strike. With trembling hands, I fumbled for my flashlight, the beam revealing its fearsome form. In a desperate bid for survival, I scrambled to my feet, the adrenaline surging through my veins as I dashed into the darkness, the echoes of its growls haunting my every step. It was a harrowing encounter that left me shaken to the core, a stark reminder of the unforgiving wilderness that lay beyond the safety of civilization.',
+      email: 'example4@email.com',
+      is_approved: true,
+    }
+
+    vi.mocked(sightingsDb.addSighting).mockRejectedValue(newSighting)
+
+    const res = await request(server)
+      .post('/api/v1/sightings')
+      .send(newSighting)
+
+    expect(res.statusCode).toBe(500)
+  })
+})
