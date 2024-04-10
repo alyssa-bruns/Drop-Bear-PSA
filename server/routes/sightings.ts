@@ -31,8 +31,6 @@ router.get('/:location', async (req, res) => {
   const location = req.params.location
   try {
     const sighting = await db.getSightingsByLocation(location)
-    console.log(location)
-    console.log(sighting)
     res.json(sighting)
   } catch (error) {
     console.error(`Database error: ${error}`)

@@ -72,7 +72,6 @@ describe('GET api/v1/sightings/:location', async () => {
     const res = await request(server).get(
       '/api/v1/sightings/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
     )
-    console.log(res)
     expect(res.statusCode).toBe(200)
   })
   it('should send an error message', async () => {
