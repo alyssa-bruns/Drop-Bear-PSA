@@ -1,9 +1,23 @@
 import * as db from '../functions/sightings'
-import { describe, it, expect, beforeAll, beforeEach, afterAll } from 'vitest'
+import {
+  describe,
+  it,
+  expect,
+  beforeAll,
+  beforeEach,
+  afterAll,
+  vi,
+} from 'vitest'
 import connection from '../connection'
 
 beforeAll(() => {
+  // Add to remove errors in test output
+  vi.spyOn(console, 'error').mockImplementation(() => {})
   return connection.migrate.latest()
+})
+
+afterAll(() => {
+  vi.clearAllMocks()
 })
 
 beforeEach(async () => {

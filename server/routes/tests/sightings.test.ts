@@ -1,9 +1,18 @@
-import { it, expect, describe, vi } from 'vitest'
+import { it, expect, describe, vi, beforeAll, afterAll } from 'vitest'
 import request from 'supertest'
 import * as sightingsDb from '../../db/functions/sightings'
 import server from '../../server'
 
 vi.mock('../../db/functions/sightings')
+
+beforeAll(() => {
+  // Add to remove errors in test output
+  vi.spyOn(console, 'error').mockImplementation(() => {})
+})
+
+afterAll(() => {
+  vi.clearAllMocks()
+})
 
 const mockSightings = [
   {
@@ -56,7 +65,7 @@ describe('GET api/v1/sightings/:id', async () => {
   it('should send an error message', async () => {
     vi.mocked(sightingsDb.getSightingById).mockRejectedValue(mockSightings)
 
-    const res = await request(server).get('/api/v1/sightings/2')
+    const res = await request(server).get('/api/v1/sightings/test')
 
     expect(res.statusCode).toBe(500)
   })
@@ -67,8 +76,6 @@ describe('GET api/v1/sightings/location/:location', async () => {
     vi.mocked(sightingsDb.getSightingsByLocation).mockResolvedValue(
       mockSightings,
     )
-    console.log(mockSightings)
-
     const res = await request(server).get(
       '/api/v1/sightings/location/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
     )
