@@ -44,3 +44,20 @@ describe('GET api/v1/sightings', async () => {
     expect(res.statusCode).toBe(500)
   })
 })
+
+describe('GET api/v1/sightings/:id', async () => {
+  it('should get one sighting', async () => {
+    vi.mocked(sightingsDb.getSightingById).mockResolvedValue(mockSightings)
+
+    const res = await request(server).get('/api/v1/sightings/2')
+
+    expect(res.statusCode).toBe(200)
+  })
+  it('should send an error message', async () => {
+    vi.mocked(sightingsDb.getSightingById).mockRejectedValue(mockSightings)
+
+    const res = await request(server).get('/api/v1/sightings/2')
+
+    expect(res.statusCode).toBe(500)
+  })
+})
