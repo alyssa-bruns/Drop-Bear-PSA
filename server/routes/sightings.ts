@@ -18,8 +18,20 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const id = Number(req.params.id)
   try {
-    const todo = await db.getSightingById(id)
-    res.json(todo)
+    const sighting = await db.getSightingById(id)
+    res.json(sighting)
+  } catch (error) {
+    console.error(`Database error: ${error}`)
+    res.sendStatus(500)
+  }
+})
+
+// GET /api/v1/sightings/:location
+router.get('/:location', async (req, res) => {
+  const location = req.params.location
+  try {
+    const sighting = await db.getSightingByLocation(location)
+    res.json(sighting)
   } catch (error) {
     console.error(`Database error: ${error}`)
     res.sendStatus(500)
