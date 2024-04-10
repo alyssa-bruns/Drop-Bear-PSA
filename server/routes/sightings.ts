@@ -14,4 +14,16 @@ router.get('/', async (req, res) => {
   }
 })
 
+// GET /api/v1/sightings/:id
+router.get('/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  try {
+    const todo = await db.getSightingById(id)
+    res.json(todo)
+  } catch (error) {
+    console.error(`Database error: ${error}`)
+    res.sendStatus(500)
+  }
+})
+
 export default router
