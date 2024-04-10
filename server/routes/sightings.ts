@@ -26,4 +26,15 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+// POST /api/v1/sightings
+router.post('/', async (req, res) => {
+  try {
+    const newSighting = req.body
+    await db.addSighting(newSighting)
+    res.sendStatus(200)
+  } catch (error) {
+    res.sendStatus(500)
+  }
+})
+
 export default router
