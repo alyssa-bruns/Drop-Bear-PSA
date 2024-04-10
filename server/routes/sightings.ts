@@ -14,11 +14,11 @@ router.get('/', async (req, res) => {
   }
 })
 
-// GET /api/v1/sightings/:id
-router.get('/:id', async (req, res) => {
-  const id = Number(req.params.id)
+// GET /api/v1/sightings/location/:location
+router.get('/location/:location', async (req, res) => {
+  const location = req.params.location
   try {
-    const sighting = await db.getSightingById(id)
+    const sighting = await db.getSightingsByLocation(location)
     res.json(sighting)
   } catch (error) {
     console.error(`Database error: ${error}`)
@@ -26,11 +26,11 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// GET /api/v1/sightings/:location
-router.get('/:location', async (req, res) => {
-  const location = req.params.location
+// GET /api/v1/sightings/:id
+router.get('/:id', async (req, res) => {
+  const id = Number(req.params.id)
   try {
-    const sighting = await db.getSightingsByLocation(location)
+    const sighting = await db.getSightingById(id)
     res.json(sighting)
   } catch (error) {
     console.error(`Database error: ${error}`)

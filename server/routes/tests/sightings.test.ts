@@ -62,7 +62,7 @@ describe('GET api/v1/sightings/:id', async () => {
   })
 })
 
-describe('GET api/v1/sightings/:location', async () => {
+describe('GET api/v1/sightings/location/:location', async () => {
   it('should get all sightings from a single location', async () => {
     vi.mocked(sightingsDb.getSightingsByLocation).mockResolvedValue(
       mockSightings,
@@ -70,7 +70,7 @@ describe('GET api/v1/sightings/:location', async () => {
     console.log(mockSightings)
 
     const res = await request(server).get(
-      '/api/v1/sightings/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
+      '/api/v1/sightings/location/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
     )
     expect(res.statusCode).toBe(200)
   })
@@ -80,7 +80,7 @@ describe('GET api/v1/sightings/:location', async () => {
     )
 
     const res = await request(server).get(
-      '/api/v1/sightings/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
+      '/api/v1/sightings/location/Blue%20Mountains%20National%20Park,%20New%20South%20Wales,%20Australia',
     )
 
     expect(res.statusCode).toBe(500)
