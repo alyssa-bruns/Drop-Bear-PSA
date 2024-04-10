@@ -1,23 +1,13 @@
-import { useGetAllSightings } from '../hooks/use-get-sightings.ts'
+import { useFruits } from '../hooks/useFruits.ts'
 import Home from './Home.tsx'
 function App() {
-  const { data } = useGetAllSightings()
+  const { data } = useFruits()
 
   return (
     <>
       <div className="app">
-        <h1>Drop Bear Sightings</h1>
-        <ul>
-          {data &&
-            data.map((sighting) => (
-              <>
-                <p>{sighting.location}</p>
-                <p>{sighting.date}</p>
-                <p>{sighting.time}</p>
-                <p>{sighting.description}</p>
-              </>
-            ))}
-        </ul>
+        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
         <Home />
       </div>
     </>
