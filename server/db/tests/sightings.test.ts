@@ -19,12 +19,16 @@ describe('getAllSightings', () => {
   })
 })
 
-describe('getSightingById', () => {
-  it('should get just one sighting', async () => {
-    const singleSighting = await db.getSightingById(2)
+describe('getSightingByLocation', () => {
+  it('should get all sightings from a single location', async () => {
+    const singleSighting = await db.getSightingByLocation(
+      'Grampians National Park, Victoria, Australia',
+    )
 
     expect(singleSighting).toHaveLength(1)
-    expect(singleSighting[0].id).toBe(2)
+    expect(singleSighting[0].location).toBe(
+      'Grampians National Park, Victoria, Australia',
+    )
   })
 })
 
