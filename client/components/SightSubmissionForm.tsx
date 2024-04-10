@@ -32,6 +32,21 @@ export function SightSubmissionForm() {
     setDescription(e.target.value)
   }
 
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault()
+      mutation.mutate({
+        description, date, time, location, email,
+      })
+      setDescription('')
+      setDate('')
+      setTime('')
+      setLocation('')
+      setEmail('')
+      navigate('/')
+    },
+    [mutation, location, description, email, date, navigate, time]
+  )
   return(
-    
+
   )
