@@ -21,7 +21,7 @@ describe('getAllSightings', () => {
 
 describe('getSightingByLocation', () => {
   it('should get all sightings from a single location', async () => {
-    const singleSighting = await db.getSightingByLocation(
+    const singleSighting = await db.getSightingsByLocation(
       'Grampians National Park, Victoria, Australia',
     )
 
