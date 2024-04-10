@@ -19,6 +19,15 @@ describe('getAllSightings', () => {
   })
 })
 
+describe('getSightingById', () => {
+  it('should get just one sighting', async () => {
+    const singleSighting = await db.getSightingById(2)
+
+    expect(singleSighting).toHaveLength(1)
+    expect(singleSighting[0].id).toBe(2)
+  })
+})
+
 afterAll(() => {
   connection.destroy()
 })
