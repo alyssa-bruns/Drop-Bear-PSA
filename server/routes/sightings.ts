@@ -4,7 +4,7 @@ import * as db from '../db/functions/sightings'
 
 const router = Router()
 
-// GET /api/v1
+// GET /api/v1/sightings
 router.get('/', async (req, res) => {
   try {
     const posts = await db.getAllSightings()

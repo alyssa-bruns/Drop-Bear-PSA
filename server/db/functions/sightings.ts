@@ -4,5 +4,5 @@ import { Sighting } from '../../../models/sightings.ts'
 const db = connection
 
 export async function getAllSightings(): Promise<Sighting[]> {
-  return db('fruit').select()
+  return db('sightings').select()
 }
