@@ -11,6 +11,7 @@ import { News } from './components/News'
 import { Donate } from './components/Donate'
 import { TouristSafety } from './components/Safety'
 import { LandingPage } from './components/LandingPage'
+import SightingReport from './components/SightingReport'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         <Route path="/news" element={<News />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/safety" element={<TouristSafety />} />
+        <Route path="/report" element={<SightingReport />} />
       </Route>
       <Route path="landing" element={<LandingPage />} />
     </>,
