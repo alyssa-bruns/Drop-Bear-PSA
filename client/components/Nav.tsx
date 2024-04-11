@@ -31,7 +31,7 @@ export function Nav() {
         className={`navbar-menu ${isActive ? 'is-active' : ''}`}
       >
         <div className="navbar-start">
-          <div className="navbar-item is-size-4 px-3">
+          <div className="navbar-item is-size-4">
             <Link to="/" className="navbar-item">
               Home
             </Link>
