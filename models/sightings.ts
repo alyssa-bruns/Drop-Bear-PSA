@@ -9,7 +9,6 @@ export interface Sighting {
 }
 
 export interface NewSighting {
-  id: number
   location: string
   date: string
   time: string
