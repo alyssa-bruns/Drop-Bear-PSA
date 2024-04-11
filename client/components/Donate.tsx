@@ -9,14 +9,14 @@ export function Donate() {
           <p>WildWork Aotearoa description</p>
         </div>
         <div id="mae">
-          <h3>Charity</h3>
+          <h3>World Wildlife Foundation</h3>
           <p>charity description</p>
           <img alt="" src="" />
         </div>
 
         <div id="keanu">
           <img alt="" src="" />
-          <h3>Charity</h3>
+          <h3>Friends of the Koala</h3>
           <p>charity description</p>
         </div>
       </div>
