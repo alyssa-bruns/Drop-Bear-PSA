@@ -15,7 +15,7 @@ export function Nav() {
           onClick={() => {
             setisActive(!isActive)
           }}
-          className={`navbar-burger burger ${isActive ? 'is-active' : ''}`}
+          className={`navbar-burger burger  ${isActive ? 'is-active' : ''}`}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
@@ -31,7 +31,7 @@ export function Nav() {
         className={`navbar-menu ${isActive ? 'is-active' : ''}`}
       >
         <div className="navbar-start">
-          <div className="navbar-item is-size-4 px-5">
+          <div className="navbar-item is-size-4 px-3">
             <Link to="/" className="navbar-item">
               Home
             </Link>

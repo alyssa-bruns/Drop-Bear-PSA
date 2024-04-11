@@ -6,13 +6,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-$navbar-height: 6.5rem;
 .navbar{
-  height: $navbar-height;
-  background-color: red;
+  background-color: #535c68;
 }
 
 .navbar-item img {
-  max-height: 90px
+  max-height: 95px
 }
 
+
+.navbar-burger span {
+  background-color: #f0932b;
+}
