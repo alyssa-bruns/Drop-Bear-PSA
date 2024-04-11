@@ -9,7 +9,6 @@ export default function Home() {
         <div className="column">Third column</div>
         <div className="column">Fourth column</div>
       </div>
-      <SightingReport />
     </>
   )
 }
