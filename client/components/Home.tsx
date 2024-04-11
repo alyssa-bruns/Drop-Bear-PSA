@@ -1,5 +1,3 @@
-import SightingReport from './SightingReport'
-
 export default function Home() {
   return (
     <>
