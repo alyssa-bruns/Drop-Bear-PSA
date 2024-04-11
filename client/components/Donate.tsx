@@ -1,23 +1,57 @@
 export function Donate() {
   return (
     <>
-      <h2>Donate</h2>
+      <header>Donate</header>
       <div>
-        <div id="alyssa">
-          <img alt="" src="" />
-          <h3>WildWork Aotearoa</h3>
-          <p>WildWork Aotearoa description</p>
+        <div id="alyssa" className="card">
+          <img
+            alt="Auckland Zoo logo"
+            src="../images/donation/auckland-zoo-logo.png"
+            className="image is-16by9"
+            width="200px"
+          />
+          <header className="card-header-title">WildWork Aotearoa</header>
+          <div className="card-content">WildWork Aotearoa description</div>
+          <img
+            alt="researching holding a native bird"
+            src="../images/donation/wild-work-aotearoa.jpeg"
+            className="image is-3by2"
+            width="200px"
+          />
         </div>
-        <div id="mae">
-          <h3>World Wildlife Foundation</h3>
-          <p>charity description</p>
-          <img alt="" src="" />
+        <div id="mae" className="card">
+          <img
+            alt="close-up of whale reentering ocean"
+            src="../images/donation/wwf-nz.png"
+            className="image is-3by2"
+            width="200px"
+          />
+          <header className="card-header-title">
+            World Wildlife Foundation
+          </header>
+          <div className="card-content">charity description</div>
+          <img
+            alt="WWF logo"
+            src="../images/donation/wwf-logo.png"
+            className="image is-16by9"
+            width="200px"
+          />
         </div>
-
-        <div id="keanu">
-          <img alt="" src="" />
-          <h3>Friends of the Koala</h3>
-          <p>charity description</p>
+        <div id="keanu" className="card">
+          <img
+            alt="Friends of the Koala logo"
+            src="../images/donation/fotk-logo.png"
+            className="image is-16by9"
+            width="200px"
+          />
+          <header className="card-header-title">Friends of the Koala</header>
+          <div className="card-content">charity description</div>
+          <img
+            alt="koala lying on a branch"
+            src="../images/donation/fotk.png"
+            className="image is-3by2"
+            width="200px"
+          />
         </div>
       </div>
     </>
