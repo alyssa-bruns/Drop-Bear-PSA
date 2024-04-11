@@ -95,6 +95,8 @@ export default function SightSubmissionForm() {
             id="description"
           ></input>
           <br />
+          <button>Send Report</button>
+          <br />
         </form>
       </div>
     </>
