@@ -8,10 +8,7 @@ export function Nav() {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a href="/" className="navbar-item">
-          <img
-            alt="Drop Bear Logo"
-            // logo here
-          />
+          <img className="image" src="images/logo1.png" alt="Drop Bear Logo" />
         </a>
 
         <button
@@ -34,7 +31,7 @@ export function Nav() {
         className={`navbar-menu ${isActive ? 'is-active' : ''}`}
       >
         <div className="navbar-start">
-          <div className="navbar-item">
+          <div className="navbar-item is-size-4 px-5">
             <Link to="/" className="navbar-item">
               Home
             </Link>

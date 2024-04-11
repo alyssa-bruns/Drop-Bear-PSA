@@ -5,3 +5,14 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+$navbar-height: 6.5rem;
+.navbar{
+  height: $navbar-height;
+  background-color: red;
+}
+
+.navbar-item img {
+  max-height: 90px
+}
+
