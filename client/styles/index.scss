@@ -5,3 +5,25 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.navbar{
+  background-color: #535c68;
+}
+
+.navbar-item img {
+  max-height: 95px
+}
+
+
+.navbar-burger span {
+  background-color: #f0932b;
+}
+
+.navbar-brand .navbar-item {
+  margin-left: 80px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1010px) {
+
+}
