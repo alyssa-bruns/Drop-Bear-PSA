@@ -1,10 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 export function EducationalRes() {
   return (
     <>
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="column">
-            <img src="images/scarydropbear.webp" alt="" />
+            <img
+              src="images/scarydropbear.webp"
+              alt="an artists scary rendering of a drop bear"
+            />
           </div>
           <div className="column">
             <div className="is-size-2">
@@ -33,7 +37,10 @@ export function EducationalRes() {
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="column">
-            <img src="images/treedropbear.webp" alt="" />
+            <img
+              src="images/treedropbear.webp"
+              alt="a drop bear in tree branches"
+            />
           </div>
           <div className="column">
             <div className="is-size-2">
@@ -60,7 +67,10 @@ export function EducationalRes() {
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="column">
-            <img src="images/dropbearinfo.png" alt="" />
+            <img
+              src="images/dropbearinfo.png"
+              alt="a chart of info about drop bears"
+            />
           </div>
           <div className="column">
             <div className="is-size-2">
@@ -86,7 +96,10 @@ export function EducationalRes() {
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="column">
-            <img src="images/angrydropbear.webp" alt="" />
+            <img
+              src="images/angrydropbear.webp"
+              alt="a drop bear with its mouth open"
+            />
           </div>
           <div className="column">
             <div className="is-size-2">
