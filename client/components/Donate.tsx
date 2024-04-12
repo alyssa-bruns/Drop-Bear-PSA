@@ -49,21 +49,25 @@ export function Donate() {
               </div>
             </div>
             <div className="column">
-              <img
-                alt="researching holding a native bird"
-                src="../images/donation/auckland-zoo-logo.png"
-                className="image is-3by2"
-              />
+              <Link to="https://www.aucklandzoo.co.nz/" target="_blank">
+                <img
+                  alt="Auckland Zoo logo"
+                  src="../images/donation/auckland-zoo-logo.png"
+                  className="image is-3by2"
+                />
+              </Link>
             </div>
           </div>
           <br />
           <div id="mae" className="columns is-centered is-mobile card">
             <div className="column">
-              <img
-                alt="WWF logo"
-                src="../images/donation/wwf-logo.png"
-                className="image is-16by9"
-              />
+              <Link target="_blank" to="https://wwf.org.nz/">
+                <img
+                  alt="WWF logo"
+                  src="../images/donation/wwf-logo.png"
+                  className="image is-16by9"
+                />
+              </Link>
             </div>
             <div className="column is-two-thirds">
               <header className="card-header-title">
@@ -144,11 +148,13 @@ export function Donate() {
               </div>
             </div>
             <div className="column">
-              <img
-                alt="koala lying on a branch"
-                src="../images/donation/fotk-logo.png"
-                className="image is-3by2"
-              />
+              <Link target="_blank" to="https://friendsofthekoala.org/">
+                <img
+                  alt="Friends of the Koala logo"
+                  src="../images/donation/fotk-logo.png"
+                  className="image is-3by2"
+                />
+              </Link>
             </div>
           </div>
         </div>
