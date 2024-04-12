@@ -9,9 +9,9 @@ export function Donate() {
             Donate
           </h2>
           <p>
-            While they can give you a bite or a fright, even the Drop Bear
-            deserve protection. Here at Drop Bear PSA, we believe in caring for
-            all animals - scary or sweet. Please consider donating to one of the
+            While they can give you a bite or a fright, even Drop Bears deserve
+            protection. Here at Drop Bear PSA, we believe in caring for all
+            animals - scary or sweet. Please consider donating to one of the
             following organizations dedicated to caring and protecting our
             animals here, in Aotearoa, and around the world.
           </p>
