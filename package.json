@@ -26,12 +26,14 @@
     ]
   },
   "dependencies": {
+    "@react-three/fiber": "^8.16.1",
     "bulma": "^1.0.0",
     "express": "^4.17.2",
     "knex": "^2.5.1",
+    "nock": "^13.5.4",
     "sqlite3": "^5.1.6",
     "superagent": "^8.1.2",
-    "nock": "^13.5.4"
+    "three": "^0.163.0"
   },
   "devDependencies": {
     "@devacademy/eslint-config": "^1.9.1",
