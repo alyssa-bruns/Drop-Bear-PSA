@@ -15,7 +15,7 @@ export function Donate() {
                 Donate
               </Link>
             </div>
-            <div className="column is-half">
+            <div className="column is-two-thirds">
               <header className="card-header-title">WildWork Aotearoa</header>
               <div className="card-content">
                 <p>
@@ -40,7 +40,7 @@ export function Donate() {
             <div className="column">
               <img
                 alt="researching holding a native bird"
-                src="../images/donation/wild-work-aotearoa.jpeg"
+                src="../images/donation/auckland-zoo-logo.png"
                 className="image is-3by2"
               />
             </div>
@@ -54,7 +54,7 @@ export function Donate() {
                 className="image is-16by9"
               />
             </div>
-            <div className="column is-half">
+            <div className="column is-two-thirds">
               <header className="card-header-title">
                 World Wildlife Foundation
               </header>
@@ -97,7 +97,7 @@ export function Donate() {
                 Donate
               </Link>
             </div>
-            <div className="column is-half">
+            <div className="column is-two-thirds">
               <header className="card-header-title">
                 Friends of the Koala
               </header>
@@ -135,7 +135,7 @@ export function Donate() {
             <div className="column">
               <img
                 alt="koala lying on a branch"
-                src="../images/donation/fotk.png"
+                src="../images/donation/fotk-logo.png"
                 className="image is-3by2"
               />
             </div>
