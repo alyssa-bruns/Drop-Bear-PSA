@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom'
 export function Donate() {
   return (
     <>
-      <header>Donate</header>
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
+          <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
+            Donate
+          </h2>
+          <p>
+            While they can give you a bite or a fright, even the Drop Bear
+            deserve protection. Here at Drop Bear PSA, we believe in caring for
+            all animals - scary or sweet. Please consider donating to one of the
+            following organizations dedicated to caring and protecting our
+            animals here, in Aotearoa, and around the world.
+          </p>
+          <br />
+          <br />
           <div id="alyssa" className="columns is-centered is-mobile card">
             <div className="column">
               <Link
