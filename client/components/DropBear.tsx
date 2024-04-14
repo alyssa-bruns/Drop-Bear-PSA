@@ -8,12 +8,12 @@ function Box() {
   const { viewport } = useThree()
 
   const [data] = useState({
-    x: THREE.MathUtils.randFloatSpread(viewport.width),
+    x: THREE.MathUtils.randFloatSpread(2),
     y: 0,
   })
 
   useFrame(() => {
-    ref.current.position.set(data.x, (data.y += 0.1), 0)
+    ref.current.position.set(data.x * viewport.width, (data.y += 0.1), 0)
     if (data.y > viewport.height / 1.5) {
       data.y = -viewport.height / 1.5
     }
