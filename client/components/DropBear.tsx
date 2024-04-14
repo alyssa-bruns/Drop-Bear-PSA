@@ -22,7 +22,11 @@ function Model({ z }) {
   })
 
   useFrame((state) => {
-    ref.current.rotation.set(data.rX, data.rY, data.rZ)
+    ref.current.rotation.set(
+      (data.rX += 0.001),
+      (data.rY += 0.004),
+      (data.rZ += 0.0005),
+    )
     ref.current.position.set(data.x * width, (data.y += 0.1), z)
     if (data.y > height / 1.5) {
       data.y = -height / 1.5
