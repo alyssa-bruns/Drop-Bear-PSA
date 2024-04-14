@@ -5,18 +5,16 @@ import { Canvas, useFrame } from '@react-three/fiber'
 
 function Box() {
   const ref = useRef()
-  const [clicked, setClicked] = useState(false)
-  useFrame((state) => {
-    // ref.current.position.y -= 0.1
-    ref.current.position.z = THREE.MathUtils.lerp(
-      ref.current.position.z,
-      clicked ? 1 : 0,
-      0.1,
-    )
+
+  useFrame(() => {
+    ref.current.position.y += 0.1
+    if (ref.current.position.y > 3) {
+      ref.current.position.y = -3
+    }
   })
 
   return (
-    <mesh ref={ref} onClick={() => setClicked(!clicked)}>
+    <mesh ref={ref}>
       <boxGeometry />
       <meshBasicMaterial color="purple" />
     </mesh>
