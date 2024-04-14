@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
+// GLTF file transformed into React Component using https://gltf.pmnd.rs/
 export function Model(props) {
   const { nodes, materials } = useGLTF(
     '../images/koala_from_poly_by_google/scene.gltf',
