@@ -4,10 +4,12 @@ import { Canvas, useFrame } from '@react-three/fiber'
 
 function Box() {
   const ref = useRef()
-  useFrame(() => {})
+  useFrame(() => {
+    ref.current.position.y -= 0.1
+  })
 
   return (
-    <mesh>
+    <mesh ref={ref}>
       <boxGeometry />
       <meshBasicMaterial color="purple" />
     </mesh>
