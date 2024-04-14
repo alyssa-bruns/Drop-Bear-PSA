@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useGLTF, Environment } from '@react-three/drei'
+import { Model } from './Model'
 
 // function Box({ z }) {
 //   const ref = useRef()
@@ -29,10 +30,10 @@ import { useGLTF, Environment } from '@react-three/drei'
 //   )
 // }
 
-function Model(props) {
-  const { scene } = useGLTF('../images/koala_from_poly_by_google/scene.gltf')
-  return <primitive object={scene} {...props} />
-}
+// function Model(props) {
+//   const { scene } = useGLTF('../images/koala_from_poly_by_google/scene.gltf')
+//   return <primitive object={scene} {...props} />
+// }
 
 export function DropBear({ count = 100 }) {
   return (
