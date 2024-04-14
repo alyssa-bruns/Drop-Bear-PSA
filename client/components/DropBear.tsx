@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import * as THREE from 'three'
-import { useRef, useState } from 'react'
+import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useGLTF } from '@react-three/drei'
 
 function Box({ z }) {
   const ref = useRef()
@@ -28,11 +29,17 @@ function Box({ z }) {
   )
 }
 
-function Model() {}
+function Model() {
+  const { scene } = useGLTF('../images/three/koala_from_polu_by_google.gltf')
+  return <primitive object={scene} />
+}
 
 export function DropBear({ count = 100 }) {
   return (
     <Canvas>
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
       {/* {Array.from({ length: count }, (_, i) => (
         <Box key={i} z={-i} />
       ))} */}
