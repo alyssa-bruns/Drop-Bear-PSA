@@ -27,12 +27,15 @@ function Box({ z }) {
     </mesh>
   )
 }
+
+function Model() {}
+
 export function DropBear({ count = 100 }) {
   return (
     <Canvas>
-      {Array.from({ length: count }, (_, i) => (
+      {/* {Array.from({ length: count }, (_, i) => (
         <Box key={i} z={-i} />
-      ))}
+      ))} */}
     </Canvas>
   )
 }
