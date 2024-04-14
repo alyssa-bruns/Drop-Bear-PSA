@@ -63,21 +63,21 @@ function Model({ z }) {
 }
 useGLTF.preload('../images/koala_from_poly_by_google/scene.gltf')
 
-export function DropBear({ count = 100, depth = 80 }) {
+export function DropBear({ count = 50, depth = 80 }) {
   return (
-    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
+    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 40 }}>
       <color attach="background" args={['#30336b']} />
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
         {Array.from({ length: count }, (_, i) => (
-          <Model key={i} z={-(i / count) * depth - 15} />
+          <Model key={i} z={-(i / count) * depth - 20} />
         ))}
         <EffectComposer>
           <DepthOfField
             target={[0, 0, depth / 2]}
             focalLength={0.5}
-            bokehScale={4}
+            bokehScale={11}
             height={700}
           />
         </EffectComposer>
