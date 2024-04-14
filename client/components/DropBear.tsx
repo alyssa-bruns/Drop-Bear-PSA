@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 
-function Box() {
+function Box({ z }) {
   const ref = useRef()
   const { viewport } = useThree()
 
@@ -13,7 +13,7 @@ function Box() {
   })
 
   useFrame(() => {
-    ref.current.position.set(data.x * viewport.width, (data.y += 0.1), 0)
+    ref.current.position.set(data.x * viewport.width, (data.y += 0.1), z)
     if (data.y > viewport.height / 1.5) {
       data.y = -viewport.height / 1.5
     }
@@ -30,7 +30,7 @@ export function DropBear({ count = 10 }) {
   return (
     <Canvas>
       {Array.from({ length: count }, (_, i) => (
-        <Box key={i} />
+        <Box key={i} z={-i} />
       ))}
     </Canvas>
   )
