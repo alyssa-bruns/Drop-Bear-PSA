@@ -24,12 +24,12 @@ function Model({ z }) {
   useFrame((state) => {
     ref.current.rotation.set(
       (data.rX += 0.001),
-      (data.rY += 0.004),
-      (data.rZ += 0.0005),
+      (data.rY += 0.003),
+      (data.rZ += 0.0004),
     )
-    ref.current.position.set(data.x * width, (data.y += 0.1), z)
-    if (data.y > height / 1.5) {
-      data.y = -height / 1.5
+    ref.current.position.set(data.x * width, (data.y += 0.05), z)
+    if (data.y > height) {
+      data.y = -height
     }
   })
 
@@ -100,22 +100,22 @@ function Model({ z }) {
 
 useGLTF.preload('../images/koala_from_poly_by_google/scene.gltf')
 
-export function DropBear({ count = 100 }) {
+export function DropBear({ count = 100, depth = 80 }) {
   return (
-    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110 }}>
+    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
       <color attach="background" args={['#30336b']} />
 
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
         {Array.from({ length: count }, (_, i) => (
-          <Model key={i} z={-i} />
+          <Model key={i} z={-(i / count) * depth - 15} />
         ))}
         <EffectComposer>
           <DepthOfField
-            target={[0, 0, 30]}
+            target={[0, 0, depth / 2]}
             focalLength={0.5}
-            bokehScale={4}
+            bokehScale={5}
             height={700}
           />
         </EffectComposer>
