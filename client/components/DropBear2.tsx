@@ -95,7 +95,7 @@ useGLTF.preload('../images/koala/koala.gltf')
 export function DropBear2({ count = 50, depth = 70 }) {
   return (
     <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 40 }}>
-      <color attach="background" args={['#100F0F']} />
+      <color attach="background" args={['#14161a']} />
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
