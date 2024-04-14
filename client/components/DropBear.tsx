@@ -16,10 +16,13 @@ function Model({ z }) {
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2),
     y: THREE.MathUtils.randFloatSpread(height),
+    rX: Math.random() * Math.PI,
+    rY: Math.random() * Math.PI,
+    rZ: Math.random() * Math.PI,
   })
 
   useFrame((state) => {
-    ref.current.rotation.y += 0.01
+    ref.current.rotation.set(data.rX, data.rY, data.rZ)
     ref.current.position.set(data.x * width, (data.y += 0.1), z)
     if (data.y > height / 1.5) {
       data.y = -height / 1.5
