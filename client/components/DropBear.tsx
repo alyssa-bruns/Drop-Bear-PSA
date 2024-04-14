@@ -25,9 +25,9 @@ function Model({ z }) {
       (data.rY += 0.003),
       (data.rZ += 0.0004),
     )
-    ref.current.position.set(data.x * width, (data.y += 0.05), z)
-    if (data.y > height) {
-      data.y = -height
+    ref.current.position.set(data.x * width, (data.y -= 0.05), z)
+    if (data.y < -height) {
+      data.y = height
     }
   })
 
@@ -77,7 +77,7 @@ export function DropBear({ count = 100, depth = 80 }) {
           <DepthOfField
             target={[0, 0, depth / 2]}
             focalLength={0.5}
-            bokehScale={5}
+            bokehScale={4}
             height={700}
           />
         </EffectComposer>
