@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unknown-property */
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 function Box() {
+  useFrame(() => {})
+
   return (
     <mesh>
       <boxGeometry />
