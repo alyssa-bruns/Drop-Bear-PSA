@@ -8,14 +8,15 @@ function Box() {
   const [clicked, setClicked] = useState(false)
   useFrame((state) => {
     // ref.current.position.y -= 0.1
+    ref.current.position.z = THREE.MathUtils.lerp(
+      ref.current.position.z,
+      clicked ? 1 : 0,
+      0.1,
+    )
   })
 
   return (
-    <mesh
-      ref={ref}
-      position={[0, 0, clicked ? 1 : 0]}
-      onClick={() => setClicked(!clicked)}
-    >
+    <mesh ref={ref} onClick={() => setClicked(!clicked)}>
       <boxGeometry />
       <meshBasicMaterial color="purple" />
     </mesh>
