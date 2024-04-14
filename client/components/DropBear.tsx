@@ -12,7 +12,6 @@ function Model({ z }) {
   )
   const { viewport, camera } = useThree()
   const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z])
-
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2),
     y: THREE.MathUtils.randFloatSpread(height),
@@ -20,7 +19,6 @@ function Model({ z }) {
     rY: Math.random() * Math.PI,
     rZ: Math.random() * Math.PI,
   })
-
   useFrame((state) => {
     ref.current.rotation.set(
       (data.rX += 0.001),
@@ -33,6 +31,7 @@ function Model({ z }) {
     }
   })
 
+  // GLTF file transformed into React Component using https://gltf.pmnd.rs/
   return (
     <group ref={ref} dispose={null}>
       <mesh
@@ -62,49 +61,12 @@ function Model({ z }) {
     </group>
   )
 }
-
-// GLTF file transformed into React Component using https://gltf.pmnd.rs/
-// export function Model({ ...props }) {
-//   const { nodes, materials } = useGLTF(
-//     '../images/koala_from_poly_by_google/scene.gltf',
-//   )
-//   return (
-//     <group {...props} dispose={null}>
-//       <mesh
-//         castShadow
-//         receiveShadow
-//         geometry={nodes.Object_4.geometry}
-//         material={materials['455A64']}
-//       />
-//       <mesh
-//         castShadow
-//         receiveShadow
-//         geometry={nodes.Object_5.geometry}
-//         material={materials.FFFFFF}
-//       />
-//       <mesh
-//         castShadow
-//         receiveShadow
-//         geometry={nodes.Object_6.geometry}
-//         material={materials['1A1A1A']}
-//       />
-//       <mesh
-//         castShadow
-//         receiveShadow
-//         geometry={nodes.Object_7.geometry}
-//         material={materials.F06292}
-//       />
-//     </group>
-//   )
-// }
-
 useGLTF.preload('../images/koala_from_poly_by_google/scene.gltf')
 
 export function DropBear({ count = 100, depth = 80 }) {
   return (
     <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
       <color attach="background" args={['#30336b']} />
-
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
