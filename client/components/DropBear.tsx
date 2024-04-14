@@ -18,8 +18,9 @@ function Model({ z }) {
     y: THREE.MathUtils.randFloatSpread(height),
   })
 
-  useFrame(() => {
-    ref.current.position.set(data.x * width, (data.y += 0.3), z)
+  useFrame((state) => {
+    ref.current.rotation.y += 0.01
+    ref.current.position.set(data.x * width, (data.y += 0.1), z)
     if (data.y > height / 1.5) {
       data.y = -height / 1.5
     }
