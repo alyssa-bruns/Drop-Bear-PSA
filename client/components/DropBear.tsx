@@ -1,15 +1,17 @@
 /* eslint-disable react/no-unknown-property */
-import { useRef } from 'react'
+import * as THREE from 'three'
+import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 
 function Box() {
   const ref = useRef()
-  useFrame(() => {
-    ref.current.position.y -= 0.1
+  const [clicked, setClicked] = useState(false)
+  useFrame((state) => {
+    // ref.current.position.y -= 0.1
   })
 
   return (
-    <mesh ref={ref}>
+    <mesh ref={ref} onClick={() => setClicked(!clicked)}>
       <boxGeometry />
       <meshBasicMaterial color="purple" />
     </mesh>
