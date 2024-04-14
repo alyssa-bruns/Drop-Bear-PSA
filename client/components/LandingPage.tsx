@@ -1,4 +1,5 @@
 import { DropBear } from './DropBear'
+import { DropBear2 } from './DropBear2'
 
 export function LandingPage() {
   return (
@@ -6,7 +7,7 @@ export function LandingPage() {
       <div className="landing-page">
         <h2>Landing Page</h2>
 
-        <DropBear />
+        <DropBear2 />
       </div>
     </>
   )

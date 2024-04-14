@@ -31,7 +31,7 @@ function Model({ z }) {
 
   // GLTF file transformed into React Component using https://gltf.pmnd.rs/
   return (
-    <group ref={ref} dispose={null} scale={[20, 20, 20]}>
+    <group ref={ref} dispose={null} scale={[15, 15, 15]}>
       <mesh
         castShadow
         receiveShadow
@@ -92,9 +92,9 @@ function Model({ z }) {
 
 useGLTF.preload('../images/koala/koala.gltf')
 
-export function DropBear2({ count = 80, depth = 70 }) {
+export function DropBear2({ count = 50, depth = 70 }) {
   return (
-    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 30 }}>
+    <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 40 }}>
       <color attach="background" args={['#30336b']} />
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
@@ -106,7 +106,7 @@ export function DropBear2({ count = 80, depth = 70 }) {
           <DepthOfField
             target={[0, 0, depth / 2]}
             focalLength={0.5}
-            bokehScale={7}
+            bokehScale={10}
             height={700}
           />
         </EffectComposer>
