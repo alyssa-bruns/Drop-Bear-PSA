@@ -5,17 +5,18 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 
 function Box({ z }) {
   const ref = useRef()
-  const { viewport } = useThree()
+  const { viewport, camera } = useThree()
+  const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z])
 
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2),
-    y: THREE.MathUtils.randFloatSpread(viewport.height),
+    y: THREE.MathUtils.randFloatSpread(height),
   })
 
   useFrame(() => {
-    ref.current.position.set(data.x * viewport.width, (data.y += 0.1), z)
-    if (data.y > viewport.height / 1.5) {
-      data.y = -viewport.height / 1.5
+    ref.current.position.set(data.x * width, (data.y += 0.3), z)
+    if (data.y > height / 1.5) {
+      data.y = -height / 1.5
     }
   })
 
@@ -26,7 +27,7 @@ function Box({ z }) {
     </mesh>
   )
 }
-export function DropBear({ count = 10 }) {
+export function DropBear({ count = 100 }) {
   return (
     <Canvas>
       {Array.from({ length: count }, (_, i) => (
