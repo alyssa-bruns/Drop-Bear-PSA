@@ -9,7 +9,6 @@ export default function Home() {
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <Map />
-          <SightSubmissionForm />
           <Sightingfeed />
           <Link to="/report">
             <button>Report a Sighting</button>

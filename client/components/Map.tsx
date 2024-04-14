@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import {
   MapContainer,
   TileLayer,
@@ -14,9 +14,6 @@ const Map = () => {
   const latitude = -37.2109
   const longitude = 142.398
 
-  //used for setting a marker location
-  // const position = [51.505, -0.09]
-
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
     <MapContainer
@@ -29,12 +26,6 @@ const Map = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker> */}
-      <LocationFinder />
     </MapContainer>
   )
 }
