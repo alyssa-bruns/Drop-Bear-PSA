@@ -26,12 +26,12 @@ function Box() {
     </mesh>
   )
 }
-export function DropBear() {
+export function DropBear({ count = 10 }) {
   return (
     <Canvas>
-      <Box />
-      <Box />
-      <Box />
+      {Array.from({ length: count }, (_, i) => (
+        <Box key={i} />
+      ))}
     </Canvas>
   )
 }
