@@ -23,9 +23,9 @@ function Model({ z }) {
     ref.current.rotation.set(
       (data.rX += 0.001),
       (data.rY += 0.003),
-      (data.rZ += 0.0004),
+      (data.rZ += 0.005),
     )
-    ref.current.position.set(data.x * width, (data.y -= 0.05), z)
+    ref.current.position.set(data.x * width, (data.y -= 0.1), z)
     if (data.y < -height) {
       data.y = height
     }
@@ -66,7 +66,7 @@ useGLTF.preload('../images/koala_from_poly_by_google/scene.gltf')
 export function DropBear({ count = 50, depth = 80 }) {
   return (
     <Canvas gl={{ alpha: false }} camera={{ near: 0.01, far: 110, fov: 40 }}>
-      <color attach="background" args={['#30336b']} />
+      <color attach="background" args={['#14161a']} />
       <spotLight position={[10, 10, 10]} intensity={1} />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
