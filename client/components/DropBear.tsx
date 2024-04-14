@@ -11,7 +11,11 @@ function Box() {
   })
 
   return (
-    <mesh ref={ref} onClick={() => setClicked(!clicked)}>
+    <mesh
+      ref={ref}
+      position={[0, 0, clicked ? 1 : 0]}
+      onClick={() => setClicked(!clicked)}
+    >
       <boxGeometry />
       <meshBasicMaterial color="purple" />
     </mesh>
