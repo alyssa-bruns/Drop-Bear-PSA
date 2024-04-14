@@ -9,7 +9,7 @@ function Box() {
 
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(2),
-    y: 0,
+    y: THREE.MathUtils.randFloatSpread(viewport.height),
   })
 
   useFrame(() => {
