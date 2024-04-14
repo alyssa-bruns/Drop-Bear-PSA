@@ -16,15 +16,15 @@ import SightingReport from './components/SightingReport'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<App />}>
+      <Route path="/home" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="/education" element={<EducationalRes />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/safety" element={<TouristSafety />} />
-        <Route path="/report" element={<SightingReport />} />
+        <Route path="/home/education" element={<EducationalRes />} />
+        <Route path="/home/news" element={<News />} />
+        <Route path="/home/donate" element={<Donate />} />
+        <Route path="/home/safety" element={<TouristSafety />} />
+        <Route path="/home/report" element={<SightingReport />} />
       </Route>
-      <Route path="landing" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage />} />
     </>,
   ),
 )

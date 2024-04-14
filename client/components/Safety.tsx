@@ -24,7 +24,7 @@ export function TouristSafety() {
           <div className="block">
             <img
               className="image"
-              src="images/koala.png"
+              src="../images/koala.png"
               alt="Ominous koala in a tree"
             />
           </div>
@@ -75,7 +75,7 @@ export function TouristSafety() {
           <div className="block">
             <img
               className="image"
-              src="images/koalaAtNight.png"
+              src="../images/koalaAtNight.png"
               alt="Ominous koala in the dark"
             />
           </div>
@@ -191,7 +191,7 @@ export function TouristSafety() {
           <div className="block">
             <img
               className="image"
-              src="images/koalaInATree.png"
+              src="../images/koalaInATree.png"
               alt="Koala looking down from a tree"
             />
           </div>

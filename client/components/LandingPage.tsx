@@ -8,7 +8,7 @@ export function LandingPage() {
       <div className="landing-page">
         <div className="centered">
           <img src="../images/logo1.png" alt="logo" />
-          <Link className="button" to="/">
+          <Link className="button" to="/home">
             Enter
           </Link>
         </div>
