@@ -10,7 +10,6 @@ export interface Sighting {
 }
 
 export interface NewSighting {
-  id: number
   display_name: string
   lat: number
   lon: number
