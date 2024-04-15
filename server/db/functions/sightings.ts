@@ -11,8 +11,8 @@ export function getSightingById(id: number) {
   return db('sightings').select().where({ id })
 }
 
-export function getSightingsByLocation(location: string) {
-  return db('sightings').select().where({ location })
+export function getSightingsByLocation(display_name: string) {
+  return db('sightings').select().where({ display_name })
 }
 
 export async function addSighting(newSighting: Sighting) {

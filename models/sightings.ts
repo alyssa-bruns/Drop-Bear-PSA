@@ -6,7 +6,6 @@ export interface Sighting {
   date: string
   time: string
   description: string
-  email: string
   is_approved: boolean
 }
 
@@ -18,5 +17,4 @@ export interface NewSighting {
   date: string
   time: string
   description: string
-  email: string
 }
