@@ -4,11 +4,13 @@ import { Footer } from './Footer.tsx'
 
 function App() {
   return (
-    <div className="app">
-      <Nav />
-      <Outlet />
-      <Footer />
-    </div>
+    <>
+      <div className="app">
+        <Nav />
+        <Outlet />
+        <Footer />
+      </div>
+    </>
   )
 }
 
