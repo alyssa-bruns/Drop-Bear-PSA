@@ -151,8 +151,10 @@ export default function SightSubmissionForm() {
               ></input>
             </div>
 
-            <div className="buttons is-large is-centered m-3">
-              <button className="button">Submit encounter!</button>
+            <div className="buttons is-centered m-3">
+              <button className="button is-large is-success is-outlined">
+                Submit encounter!
+              </button>
             </div>
           </div>
         </form>

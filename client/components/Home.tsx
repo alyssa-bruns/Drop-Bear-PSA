@@ -25,7 +25,7 @@ export default function Home() {
                 <Map />
                 <div className="buttons is-centered m-3">
                   <button
-                    className="button"
+                    className="button is-danger is-outlined"
                     onClick={() => {
                       setIsReporting(false)
                     }}
@@ -57,7 +57,7 @@ export default function Home() {
               <Map />
               <div className="buttons is-centered m-3">
                 <button
-                  className="button is-large"
+                  className="button is-success is-outlined is-large"
                   onClick={() => {
                     setIsReporting(true)
                   }}
