@@ -89,45 +89,72 @@ export default function SightSubmissionForm() {
     <>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="location">Location: </label>
-          <Autosuggest
-            suggestions={suggestions}
-            onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-            onSuggestionsClearRequested={onSuggestionsClearRequested}
-            onSuggestionSelected={onSuggestionSelected}
-            getSuggestionValue={(suggestion) => suggestion}
-            renderSuggestion={(suggestion) => <div>{suggestion}</div>}
-            inputProps={inputProps}
-          />
+          <div className="field is-horizontal">
+            <div className="field-label">
+              <label className="label has-text-left" htmlFor="location">
+                Location:{' '}
+              </label>
+              <div className="input">
+                <Autosuggest
+                  suggestions={suggestions}
+                  onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+                  onSuggestionsClearRequested={onSuggestionsClearRequested}
+                  onSuggestionSelected={onSuggestionSelected}
+                  getSuggestionValue={(suggestion) => suggestion}
+                  renderSuggestion={(suggestion) => <div>{suggestion}</div>}
+                  inputProps={inputProps}
+                />
+              </div>
+            </div>
 
-          <br />
-          <label htmlFor="date">Date: </label>
-          <input
-            placeholder="date of encounter (ex: 2024-04-21)"
-            onChange={handleDateChange}
-            value={date}
-            id="date"
-          ></input>
-          <br />
-          <label htmlFor="time">Time: </label>
-          <input
-            placeholder="time of encounter (ex: 23:00:00)"
-            onChange={handleTimeChange}
-            value={time}
-            id="time"
-          ></input>
-          <br />
-          <br />
-          <label htmlFor="description">Encounter Description: </label>
-          <input
-            placeholder="Decribe your drop bear encounter with as much detail as you can remember"
-            onChange={handleDescriptionChange}
-            value={description}
-            id="description"
-          ></input>
-          <br />
-          <button>Send Report</button>
-          <br />
+            <div className="field-label">
+              <label className="label has-text-left" htmlFor="date">
+                Date:{' '}
+              </label>
+              <div className="control"></div>
+              <input
+                type="date"
+                className="input"
+                placeholder="date of encounter (ex: 2024-04-21)"
+                onChange={handleDateChange}
+                value={date}
+                id="date"
+              ></input>
+            </div>
+
+            <div className="field-label">
+              <label className="has-text-left label" htmlFor="time">
+                Time:{' '}
+              </label>
+              <input
+                type="time"
+                className="input"
+                placeholder="time of encounter (ex: 23:00:00)"
+                onChange={handleTimeChange}
+                value={time}
+                id="time"
+              ></input>
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="has-text-left label" htmlFor="description">
+              Encounter Description:{' '}
+            </label>
+            <div className="control">
+              <input
+                className="input textarea"
+                placeholder="Decribe your drop bear encounter with as much detail as you can remember"
+                onChange={handleDescriptionChange}
+                value={description}
+                id="description"
+              ></input>
+            </div>
+
+            <div className="buttons is-large is-centered m-3">
+              <button className="button">Submit encounter!</button>
+            </div>
+          </div>
         </form>
       </div>
     </>

@@ -23,13 +23,16 @@ export default function Home() {
             <div className="columns">
               <div className="column is-three-fifths is-offset-one-fifth">
                 <Map />
-                <button
-                  onClick={() => {
-                    setIsReporting(false)
-                  }}
-                >
-                  cancel
-                </button>
+                <div className="buttons is-centered m-3">
+                  <button
+                    className="button"
+                    onClick={() => {
+                      setIsReporting(false)
+                    }}
+                  >
+                    cancel
+                  </button>
+                </div>
                 <SightingReport />
                 <Sightingfeed />
               </div>
