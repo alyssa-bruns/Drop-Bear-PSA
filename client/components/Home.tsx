@@ -19,7 +19,7 @@ export default function Home() {
             <div className="column is-three-fifths is-offset-one-fifth">
               <Map />
               <Sightingfeed />
-              <Link to="/report">
+              <Link to="/home/report">
                 <button>Report a Sighting</button>
               </Link>
             </div>

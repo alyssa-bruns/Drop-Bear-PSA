@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 
+/* eslint-disable react/no-unescaped-entities */
 export function TouristSafety() {
   return (
     <>
