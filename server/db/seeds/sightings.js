@@ -6,7 +6,9 @@ export async function seed(knex) {
   await knex('sightings').insert([
     {
       id: 1,
-      location: 'Grampians National Park, Victoria, Australia',
+      display_name: 'Grampians National Park, Victoria, Australia',
+      lat: -37.4154116,
+      lon: 142.43338307147962,
       date: '2024-04-10',
       time: '21:00:00',
       description:
@@ -16,7 +18,9 @@ export async function seed(knex) {
     },
     {
       id: 2,
-      location: 'Blue Mountains National Park, New South Wales, Australia',
+      display_name: 'Blue Mountains National Park, New South Wales, Australia',
+      lat: -33.6152,
+      lon: 150.4179,
       date: '2024-04-11',
       time: '13:30:00',
       description:
@@ -26,7 +30,9 @@ export async function seed(knex) {
     },
     {
       id: 3,
-      location: 'Daintree Rainforest, Queensland, Australia',
+      display_name: 'Daintree Rainforest, Queensland, Australia',
+      lat: -16.1653032,
+      lon: 145.41839146675824,
       date: '2024-04-12',
       time: '10:45:00',
       description:

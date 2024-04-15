@@ -1,6 +1,8 @@
 export interface Sighting {
   id: number
-  location: string
+  display_name: string
+  lat: number
+  lon: number
   date: string
   time: string
   description: string
@@ -9,7 +11,10 @@ export interface Sighting {
 }
 
 export interface NewSighting {
-  location: string
+  id: number
+  display_name: string
+  lat: number
+  lon: number
   date: string
   time: string
   description: string
