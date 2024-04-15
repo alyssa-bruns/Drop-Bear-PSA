@@ -6,7 +6,6 @@ export default function SightSubmissionForm() {
   const [location, setLocation] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
-  const [email, setEmail] = useState('')
   const [description, setDescription] = useState('')
 
   const navigate = useNavigate()
@@ -24,10 +23,6 @@ export default function SightSubmissionForm() {
     setTime(e.target.value)
   }
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }
-
   const handleDescriptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     setDescription(e.target.value)
   }
@@ -40,16 +35,14 @@ export default function SightSubmissionForm() {
         date,
         time,
         location,
-        email,
       })
       setDescription('')
       setDate('')
       setTime('')
       setLocation('')
-      setEmail('')
       navigate('/')
     },
-    [mutation, location, description, email, date, navigate, time],
+    [mutation, location, description, date, navigate, time],
   )
   return (
     <>
@@ -79,13 +72,6 @@ export default function SightSubmissionForm() {
             id="time"
           ></input>
           <br />
-          <label htmlFor="email">Email: </label>
-          <input
-            placeholder="email"
-            onChange={handleEmailChange}
-            value={email}
-            id="email"
-          ></input>
           <br />
           <label htmlFor="description">Encounter Description: </label>
           <input
