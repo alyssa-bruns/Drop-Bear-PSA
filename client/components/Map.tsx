@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useGetAllSightings } from '../hooks/use-get-sightings'
+import FindSubmission from './FindSubmission'
 
 const Map = () => {
   const { data: sightings = [], isLoading, isError } = useGetAllSightings()
@@ -30,6 +31,7 @@ const Map = () => {
           <Popup>
             <div>
               <h3>{sighting.display_name}</h3>
+              <FindSubmission />
               <p>Date: {sighting.date}</p>
               <p>Time: {sighting.time}</p>
               <p>{sighting.description}</p>

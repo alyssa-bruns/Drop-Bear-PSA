@@ -40,6 +40,7 @@
     "nock": "^13.5.4",
     "react-autosuggest": "^10.1.0",
     "react-leaflet": "^4.2.1",
+    "react-router-hash-link": "^2.4.3",
     "sqlite3": "^5.1.6",
     "superagent": "^8.1.2",
     "three": "^0.163.0"

@@ -8,7 +8,7 @@ export default function Sightingfeed() {
       {data &&
         data.map((sighting) => (
           <>
-            <div className="card">
+            <div id={`id${sighting.id}`} className="card">
               <header className="card-header">
                 <p className="card-header-title">{sighting.display_name}</p>
                 <br />
