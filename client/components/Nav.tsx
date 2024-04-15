@@ -7,7 +7,7 @@ export function Nav() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a href="/" className="navbar-item">
+        <a href="/home" className="navbar-item">
           <img className="image" src="images/logo1.png" alt="Drop Bear Logo" />
         </a>
 
@@ -32,19 +32,19 @@ export function Nav() {
       >
         <div className="navbar-start">
           <div className="navbar-item is-size-4">
-            <Link to="/" className="navbar-item">
+            <Link to="/home" className="navbar-item">
               Home
             </Link>
-            <Link to="/education" className="navbar-item">
-              Educational
+            <Link to="/home/education" className="navbar-item">
+              Education
             </Link>
-            <Link to="/safety" className="navbar-item">
+            <Link to="/home/safety" className="navbar-item">
               Tourist Safety
             </Link>
-            <Link to="/news" className="navbar-item">
+            <Link to="/home/news" className="navbar-item">
               News
             </Link>
-            <Link to="/donate" className="navbar-item">
+            <Link to="/home/donate" className="navbar-item">
               Donate
             </Link>
           </div>
