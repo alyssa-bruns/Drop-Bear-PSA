@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
+  Routes,
 } from 'react-router-dom'
 import Home from './components/Home'
 import App from './components/App'
