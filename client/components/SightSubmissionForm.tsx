@@ -34,7 +34,6 @@ export default function SightSubmissionForm() {
     async (e: React.FormEvent) => {
       e.preventDefault()
       const results = await provider.search({ query: value })
-      const { display_name, lat, lon } = results[0].raw
       setDisplay_Name(results[0].raw.display_name)
       setLat(Number(results[0].raw.lat))
       setLon(Number(results[0].raw.lon))
@@ -42,27 +41,16 @@ export default function SightSubmissionForm() {
         description,
         date,
         time,
-        lat,
-        lon,
-        display_name,
+        lat: Number(results[0].raw.lat),
+        lon: Number(results[0].raw.lon),
+        display_name: results[0].raw.display_name,
       })
       setDescription('')
       setDate('')
       setTime('')
       navigate('/home')
     },
-    [
-      mutation,
-      lat,
-      lon,
-      display_name,
-      description,
-      date,
-      navigate,
-      provider,
-      value,
-      time,
-    ],
+    [mutation, description, date, navigate, provider, value, time],
   )
 
   const getSuggestions = async (value: string) => {
@@ -102,12 +90,6 @@ export default function SightSubmissionForm() {
       <div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="location">Location: </label>
-          {/* <input
-            // placeholder="place of encounter"
-            // onChange={handleLocationChange}
-            value={display_name}
-            id="location"
-          ></input> */}
           <Autosuggest
             suggestions={suggestions}
             onSuggestionsFetchRequested={onSuggestionsFetchRequested}
