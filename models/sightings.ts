@@ -1,17 +1,19 @@
 export interface Sighting {
   id: number
-  location: string
+  display_name: string
+  lat: number
+  lon: number
   date: string
   time: string
   description: string
-  email: string
   is_approved: boolean
 }
 
 export interface NewSighting {
-  location: string
+  display_name: string
+  lat: number
+  lon: number
   date: string
   time: string
   description: string
-  email: string
 }

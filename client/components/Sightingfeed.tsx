@@ -10,7 +10,7 @@ export default function Sightingfeed() {
           <>
             <div className="card">
               <header className="card-header">
-                <p className="card-header-title">{sighting.location}</p>
+                <p className="card-header-title">{sighting.display_name}</p>
                 <br />
               </header>
               <p className="card-header-title is-size-7	">
