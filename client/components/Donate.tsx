@@ -12,7 +12,7 @@ export function Donate() {
             duration: 0.75,
           }}
         >
-          <div className="columns link-styles ">
+          <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
               <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
                 Donate
@@ -45,17 +45,21 @@ export function Donate() {
                           <img
                             alt="Auckland Zoo logo"
                             src="../images/donation/auckland-zoo-logo.png"
-                            className="image is-3by2 is-inline-block"
+                            className="image is-3by2 is-inline-block theme-light"
                             width={100}
                           />
                         </Link>
                       </div>
-                      <Link
-                        target="_blank"
-                        to="https://www.aucklandzoo.co.nz/get-involved/donate-wild-work-aotearoa"
-                      >
-                        Donate
-                      </Link>
+
+                      <strong>
+                        <Link
+                          target="_blank"
+                          className={'link-styles'}
+                          to="https://www.aucklandzoo.co.nz/get-involved/donate-wild-work-aotearoa"
+                        >
+                          Donate
+                        </Link>
+                      </strong>
                     </div>
                   </div>
                   <div className="column card-content">
@@ -97,14 +101,20 @@ export function Donate() {
                           <img
                             alt="WWF logo"
                             src="../images/donation/wwf-logo.png"
-                            className="image is-16by9 is-inline-block"
+                            className="image is-16by9 is-inline-block theme-light"
                             width={200}
                           />
                         </Link>
                       </div>
-                      <Link target="_blank" to="https://wwf.org.nz/donate">
-                        Donate
-                      </Link>
+                      <strong>
+                        <Link
+                          target="_blank"
+                          className={'link-styles'}
+                          to="https://wwf.org.nz/donate"
+                        >
+                          Donate
+                        </Link>
+                      </strong>
                     </div>
                   </div>
                   <div className="column card-content">
@@ -154,18 +164,20 @@ export function Donate() {
                           <img
                             alt="Friends of the Koala logo"
                             src="../images/donation/fotk-logo.png"
-                            className="image is-3by2 is-inline-block"
+                            className="image is-3by2 is-inline-block theme-light"
                             width={200}
                           />
                         </Link>
                       </div>
-                      <Link
-                        className="button"
-                        target="_blank"
-                        to="https://friendsofthekoala.org/save-koalas/donate/"
-                      >
-                        Donate
-                      </Link>
+                      <strong>
+                        <Link
+                          className={'link-styles'}
+                          target="_blank"
+                          to="https://friendsofthekoala.org/save-koalas/donate/"
+                        >
+                          Donate
+                        </Link>
+                      </strong>
                     </div>
                   </div>
                   <div className="column card-content">
