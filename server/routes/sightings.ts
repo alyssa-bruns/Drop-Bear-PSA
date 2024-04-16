@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-// GET /api/v1/sightings/location/:location
+// GET /api/v1/sightings/home/location/:location
 router.get('/location/:location', async (req, res) => {
   const location = req.params.location
   try {

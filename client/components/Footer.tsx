@@ -7,7 +7,10 @@ export function Footer() {
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="content has-text-centered">
             <p>
-              <strong>Drop Bear PSA</strong> is created as a final project by
+              <Link to="/">
+                <strong>Drop Bear PSA </strong>
+              </Link>
+              is created as a final project by
               <Link to="https://github.com/alyssa-bruns"> Alyssa,</Link>
               <Link to="https://github.com/Mae-BC"> Mae </Link> &
               <Link to="https://github.com/KeakOne"> Keanu</Link> as part of
