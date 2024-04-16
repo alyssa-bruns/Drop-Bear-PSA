@@ -160,7 +160,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
                 id="description"
               ></input>
             </div>
-
+            <div></div>
             <div className="buttons is-centered m-3">
               <button className="button is-large is-success is-outlined">
                 Submit encounter!

@@ -35,7 +35,9 @@ export default function Home() {
                     cancel
                   </button>
                 </div>
-                <SightSubmissionForm onFormSubmit={handleFormSubmit} />
+                <div className="column">
+                  <SightSubmissionForm onFormSubmit={handleFormSubmit} />
+                </div>
                 <Sightingfeed />
               </div>
             </div>
@@ -57,9 +59,10 @@ export default function Home() {
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
               <Map />
+
               <div className="buttons is-centered m-3">
                 <button
-                  className="button is-success is-outlined is-large"
+                  className="button is-success is-outlined is-medium"
                   onClick={() => {
                     setIsReporting(true)
                   }}
