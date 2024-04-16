@@ -49,7 +49,6 @@ export default function SightSubmissionForm() {
       setDate('')
       setTime('')
       setValue('')
-      // window.location.href = `/home#idfooter`
 
       const successDiv = document.getElementById('footer')
       if (successDiv) {
