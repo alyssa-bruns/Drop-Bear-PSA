@@ -65,7 +65,6 @@ export default function Home() {
                 </button>
               </div>
               <Sightingfeed />
-              <br />
             </div>
           </div>
         </motion.div>

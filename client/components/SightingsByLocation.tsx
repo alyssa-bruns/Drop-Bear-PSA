@@ -49,6 +49,7 @@ export default function SightingsByLocation() {
                     ) : null,
                   )}
               </ul>
+              <br />
             </div>
           </div>
         </motion.div>
