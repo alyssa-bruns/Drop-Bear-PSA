@@ -129,6 +129,7 @@ export function EducationalRes() {
                   ears. There is no evidence to suggest that any such repellents
                   work.
                 </p>
+                <br />
               </div>
             </div>
           </div>

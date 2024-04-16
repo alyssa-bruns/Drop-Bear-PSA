@@ -223,6 +223,7 @@ export function TouristSafety() {
                   mechanism against drop bears specifically and will likely to
                   be ineffective against other Australian wildlife.
                 </p>
+                <br />
               </div>
             </div>
           </div>

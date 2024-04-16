@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Sightingfeed from './Sightingfeed'
 import SightingReport from './SightingReport'
 import Map from './Map'
-import SightSubmissionForm from './SightSubmissionForm'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -66,6 +65,7 @@ export default function Home() {
                 </button>
               </div>
               <Sightingfeed />
+              <br />
             </div>
           </div>
         </motion.div>
