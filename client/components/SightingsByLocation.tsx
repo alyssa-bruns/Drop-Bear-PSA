@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useGetSightingsByLocation } from '../hooks/use-get-sightings'
 import Map from './Map'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -20,6 +20,13 @@ export default function SightingsByLocation() {
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
               <Map />
+              <div className="buttons is-centered m-3">
+                <Link to="/home">
+                  <button className="button is-danger is-outlined ">
+                    Back to Sighting Feed
+                  </button>
+                </Link>
+              </div>
               <ul>
                 {data &&
                   data.map((sighting) =>
