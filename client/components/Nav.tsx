@@ -7,12 +7,8 @@ export function Nav() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a href="/home" className="navbar-item centered-image-container">
-          <img
-            className="centered-image"
-            src="../images/logo1.png"
-            alt="Drop Bear Logo"
-          />
+        <a href="/home" className="navbar-item">
+          <img src="../images/logo1.png" alt="Drop Bear Logo" />
         </a>
 
         <button
