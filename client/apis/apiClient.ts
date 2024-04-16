@@ -21,6 +21,7 @@ export async function getSightingsByLocation(
   return res.body
 }
 
-export async function addSighting(newSighting: NewSighting): Promise<void> {
-  await request.post(`${rootUrl}`).send(newSighting)
+export async function addSighting(newSighting: NewSighting) {
+  const res = await request.post(`${rootUrl}`).send(newSighting)
+  return res
 }

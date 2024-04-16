@@ -26,19 +26,21 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {sightings.map((sighting) => (
-        <Marker key={sighting.id} position={[sighting.lat, sighting.lon]}>
-          <Popup>
-            <div>
-              <h3>{sighting.display_name}</h3>
-              <FindSubmission sight={sighting.id} />
-              <p>Date: {sighting.date}</p>
-              <p>Time: {sighting.time}</p>
-              <p>{sighting.description}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      {sightings.map((sighting) =>
+        sighting.is_approved ? (
+          <Marker key={sighting.id} position={[sighting.lat, sighting.lon]}>
+            <Popup>
+              <div>
+                <h3>{sighting.display_name}</h3>
+                <FindSubmission sight={sighting.id} />
+                <p>Date: {sighting.date}</p>
+                <p>Time: {sighting.time}</p>
+                <p>{sighting.description}</p>
+              </div>
+            </Popup>
+          </Marker>
+        ) : null,
+      )}
     </MapContainer>
   )
 }

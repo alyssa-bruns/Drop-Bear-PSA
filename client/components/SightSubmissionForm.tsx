@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { ChangeEvent, useCallback, useState } from 'react'
 import useAddSighting from '../hooks/use-add-sightings'
-import { useNavigate } from 'react-router-dom'
 import { OpenStreetMapProvider } from 'leaflet-geosearch'
 import Autosuggest from 'react-autosuggest'
 
-export default function SightSubmissionForm() {
+export default function SightSubmissionForm({ onFormSubmit }) {
   const [display_name, setDisplay_Name] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
@@ -13,9 +13,9 @@ export default function SightSubmissionForm() {
   const [lat, setLat] = useState(0)
   const [lon, setLon] = useState(0)
   const [suggestions, setSuggestions] = useState<string[]>([])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const provider = new OpenStreetMapProvider()
 
-  const navigate = useNavigate()
   const mutation = useAddSighting()
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -45,12 +45,18 @@ export default function SightSubmissionForm() {
         lon: Number(results[0].raw.lon),
         display_name: results[0].raw.display_name,
       })
+      onFormSubmit() //Sets isReporting to false upon submit
       setDescription('')
       setDate('')
       setTime('')
-      navigate('/home')
+      setValue('') // Sets location input blank
+      //Scroll to footer upon submit
+      const successDiv = document.getElementById('footer')
+      if (successDiv) {
+        successDiv.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     },
-    [mutation, description, date, navigate, provider, value, time],
+    [provider, value, mutation, description, date, time, onFormSubmit],
   )
 
   const getSuggestions = async (value: string) => {

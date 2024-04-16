@@ -17,3 +17,7 @@ export interface NewSighting {
   time: string
   description: string
 }
+
+export interface SightingId {
+  id: number
+}

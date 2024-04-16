@@ -1,12 +1,15 @@
-// import { Link } from 'react-router-dom'
 import Sightingfeed from './Sightingfeed'
-import SightingReport from './SightingReport'
 import Map from './Map'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+import SightSubmissionForm from './SightSubmissionForm'
 
 export default function Home() {
   const [isReporting, setIsReporting] = useState(false)
+
+  const handleFormSubmit = () => {
+    setIsReporting(false) // Set isReporting to false upon form submission
+  }
 
   if (isReporting) {
     return (
@@ -32,7 +35,7 @@ export default function Home() {
                     cancel
                   </button>
                 </div>
-                <SightingReport />
+                <SightSubmissionForm onFormSubmit={handleFormSubmit} />
                 <Sightingfeed />
               </div>
             </div>
