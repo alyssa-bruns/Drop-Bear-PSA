@@ -4,7 +4,7 @@ import useAddSighting from '../hooks/use-add-sightings'
 import { OpenStreetMapProvider } from 'leaflet-geosearch'
 import Autosuggest from 'react-autosuggest'
 
-export default function SightSubmissionForm() {
+export default function SightSubmissionForm({ onFormSubmit }) {
   const [display_name, setDisplay_Name] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
@@ -45,6 +45,7 @@ export default function SightSubmissionForm() {
         lon: Number(results[0].raw.lon),
         display_name: results[0].raw.display_name,
       })
+      onFormSubmit() //Sets isReporting to false upon submit
       setDescription('')
       setDate('')
       setTime('')
@@ -55,7 +56,7 @@ export default function SightSubmissionForm() {
         successDiv.scrollIntoView({ behavior: 'smooth', block: 'end' })
       }
     },
-    [provider, value, mutation, description, date, time],
+    [provider, value, mutation, description, date, time, onFormSubmit],
   )
 
   const getSuggestions = async (value: string) => {

@@ -11,8 +11,8 @@ import { News } from './components/News'
 import { Donate } from './components/Donate'
 import { TouristSafety } from './components/Safety'
 import { LandingPage } from './components/LandingPage'
-import SightingReport from './components/SightingReport'
 import SightingsByLocation from './components/SightingsByLocation'
+import SightSubmissionForm from './components/SightSubmissionForm'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,7 +27,6 @@ const router = createBrowserRouter(
         <Route path="/home/news" element={<News />} />
         <Route path="/home/donate" element={<Donate />} />
         <Route path="/home/safety" element={<TouristSafety />} />
-        <Route path="/home/report" element={<SightingReport />} />
       </Route>
       <Route path="/" element={<LandingPage />} />
     </>,
