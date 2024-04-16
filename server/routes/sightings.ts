@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 })
 
 // GET /api/v1/sightings/location/:location
-router.get('/location/:location', async (req, res) => {
+router.get('/home/location/:location', async (req, res) => {
   const location = req.params.location
   try {
     const sighting = await db.getSightingsByLocation(location)

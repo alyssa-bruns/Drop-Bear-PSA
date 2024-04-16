@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
-import { useGetAllSightings } from '../hooks/use-get-sightings'
+import { useParams } from 'react-router-dom'
+import { useGetSightingsByLocation } from '../hooks/use-get-sightings'
 
-export default function Sightingfeed() {
-  const { data } = useGetAllSightings()
+export default function SightingsByLocation() {
+  const { location } = useParams()
+  const { data } = useGetSightingsByLocation(String(location))
 
   return (
     <ul>
@@ -10,12 +11,10 @@ export default function Sightingfeed() {
         data.map((sighting) =>
           sighting.is_approved ? (
             <div className="card" key={sighting.id}>
-              <Link to={`/home/location/${sighting.display_name}`}>
-                <header className="card-header">
-                  <p className="card-header-title">{sighting.display_name}</p>
-                  <br />
-                </header>
-              </Link>
+              <header className="card-header">
+                <p className="card-header-title">{sighting.display_name}</p>
+                <br />
+              </header>
               <p className="card-header-title is-size-7">
                 Sighting recorded at {sighting.time} on {sighting.date}
               </p>
