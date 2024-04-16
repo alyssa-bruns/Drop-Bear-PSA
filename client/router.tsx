@@ -12,7 +12,6 @@ import { Donate } from './components/Donate'
 import { TouristSafety } from './components/Safety'
 import { LandingPage } from './components/LandingPage'
 import SightingsByLocation from './components/SightingsByLocation'
-import SightSubmissionForm from './components/SightSubmissionForm'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

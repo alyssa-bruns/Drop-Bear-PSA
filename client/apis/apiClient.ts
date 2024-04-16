@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { NewSighting, Sighting, SightingId } from '../../models/sightings'
+import { NewSighting, Sighting } from '../../models/sightings'
 
 const rootUrl = '/api/v1/sightings'
 
