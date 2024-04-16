@@ -172,6 +172,7 @@ export function Donate() {
                   </Link>
                 </div>
               </div>
+              <br />
             </div>
           </div>
         </motion.div>

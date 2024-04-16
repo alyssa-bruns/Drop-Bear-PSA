@@ -45,9 +45,6 @@ export function Nav() {
             <Link to="/home/safety" className="navbar-item">
               Tourist Safety
             </Link>
-            <Link to="/home/news" className="navbar-item">
-              News
-            </Link>
             <Link to="/home/donate" className="navbar-item">
               Donate
             </Link>

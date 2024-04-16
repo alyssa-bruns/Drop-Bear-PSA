@@ -3,7 +3,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Routes,
 } from 'react-router-dom'
 import Home from './components/Home'
 import App from './components/App'
@@ -13,12 +12,17 @@ import { Donate } from './components/Donate'
 import { TouristSafety } from './components/Safety'
 import { LandingPage } from './components/LandingPage'
 import SightingReport from './components/SightingReport'
+import SightingsByLocation from './components/SightingsByLocation'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/home" element={<App />}>
         <Route index element={<Home />} />
+        <Route
+          path="/home/location/:location"
+          element={<SightingsByLocation />}
+        />
         <Route path="/home/education" element={<EducationalRes />} />
         <Route path="/home/news" element={<News />} />
         <Route path="/home/donate" element={<Donate />} />
