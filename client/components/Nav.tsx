@@ -7,9 +7,9 @@ export function Nav() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a href="/home" className="navbar-item">
+        <a href="/home" className="navbar-item centered-image-container">
           <img
-            className="image"
+            className="centered-image"
             src="../images/logo1.png"
             alt="Drop Bear Logo"
           />

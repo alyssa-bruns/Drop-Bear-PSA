@@ -92,11 +92,7 @@ export default function SightSubmissionForm() {
         <form onSubmit={handleSubmit}>
           <div className="field is-horizontal">
             <div className="field-label">
-              <label
-                className="label has-text-left"
-                htmlFor="location"
-                required
-              >
+              <label className="label has-text-left" htmlFor="location">
                 Location:{' '}
               </label>
               <div className="input">
