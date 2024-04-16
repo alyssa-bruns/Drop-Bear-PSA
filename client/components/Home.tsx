@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import Sightingfeed from './Sightingfeed'
 import SightingReport from './SightingReport'
 import Map from './Map'

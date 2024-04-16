@@ -48,8 +48,8 @@ export default function SightSubmissionForm() {
       setDescription('')
       setDate('')
       setTime('')
-      setValue('')
-
+      setValue('') // Sets location input blank
+      //Scroll to footer upon submit
       const successDiv = document.getElementById('footer')
       if (successDiv) {
         successDiv.scrollIntoView({ behavior: 'smooth', block: 'end' })
