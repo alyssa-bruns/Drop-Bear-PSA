@@ -31,7 +31,7 @@ const Map = () => {
           <Popup>
             <div>
               <h3>{sighting.display_name}</h3>
-              <FindSubmission />
+              <FindSubmission sight={sighting.id} />
               <p>Date: {sighting.date}</p>
               <p>Time: {sighting.time}</p>
               <p>{sighting.description}</p>
