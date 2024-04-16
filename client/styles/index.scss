@@ -57,13 +57,25 @@ body {
 }
 
 .navbar-burger span {
-  background-color: #f0932b;
+  background-color: #ffbe76;
 }
 
 .navbar-brand .navbar-item {
   margin-left: 80px;
   margin-right: 30px;
 }
+
+.navbar-item a {
+  color: #ffbe76;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.navbar-item a:hover {
+  background-color: transparent !important; /* Set the background color to transparent */
+  color: white !important;
+}
+
 
 
 
@@ -113,6 +125,12 @@ body {
 // .react-autosuggest__suggestion--focused {
 //   background-color: red;
 // }
+
+$footer-padding: 3rem 1.5rem 3rem;
+
+.footer {
+  padding: $footer-padding;
+}
 
 @media screen and (max-width: 1010px) {
 }
