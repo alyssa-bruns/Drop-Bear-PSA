@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { ChangeEvent, useCallback, useState } from 'react'
 import useAddSighting from '../hooks/use-add-sightings'
-import { useNavigate } from 'react-router-dom'
 import { OpenStreetMapProvider } from 'leaflet-geosearch'
 import Autosuggest from 'react-autosuggest'
 
@@ -13,9 +13,9 @@ export default function SightSubmissionForm() {
   const [lat, setLat] = useState(0)
   const [lon, setLon] = useState(0)
   const [suggestions, setSuggestions] = useState<string[]>([])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const provider = new OpenStreetMapProvider()
 
-  const navigate = useNavigate()
   const mutation = useAddSighting()
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
