@@ -90,6 +90,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
     placeholder: 'Search for a location...',
     value,
     onChange: onChange,
+    required: 'true',
   }
   return (
     <>
@@ -119,6 +120,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
               </label>
               <div className="control"></div>
               <input
+                required
                 type="date"
                 className="input"
                 placeholder="date of encounter (ex: 2024-04-21)"
@@ -133,6 +135,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
                 Time:{' '}
               </label>
               <input
+                required
                 type="time"
                 className="input"
                 placeholder="time of encounter (ex: 23:00:00)"
@@ -149,7 +152,8 @@ export default function SightSubmissionForm({ onFormSubmit }) {
             </label>
             <div className="control">
               <input
-                className="input textarea"
+                required
+                className="input textarea has-text-centered"
                 placeholder="Decribe your drop bear encounter with as much detail as you can remember"
                 onChange={handleDescriptionChange}
                 value={description}

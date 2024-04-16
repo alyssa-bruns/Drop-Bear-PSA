@@ -76,7 +76,27 @@ body {
   color: white !important;
 }
 
+.map {
+  border-radius: 25px;
+}
 
+@media screen and (max-width: 1010px) {
+  .navbar-brand .navbar-item {
+    // display: flex;
+    margin-left: 38%
+  }
+  
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Update CSS variables */
+    .react-autosuggest__suggestions-container {
+      background-color: black;
+    }
+  }
+}
+  
 
 
 // STYLING AUTOSUGGESTIONS BELOW
@@ -117,20 +137,9 @@ body {
   z-index: 2;
 }
 
-// .react-autosuggest__suggestion {
-//   cursor: pointer;
-//   padding: 10px 20px;
-// }
-
-// .react-autosuggest__suggestion--focused {
-//   background-color: red;
-// }
-
 $footer-padding: 3rem 1.5rem 3rem;
 
 .footer {
   padding: $footer-padding;
 }
 
-@media screen and (max-width: 1010px) {
-}

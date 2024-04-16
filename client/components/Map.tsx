@@ -15,11 +15,11 @@ const Map = () => {
 
   return (
     <MapContainer
-      className="map m-4"
+      className="map mt-4"
       center={[latitude, longitude]}
       zoom={3}
       ref={mapRef}
-      style={{ height: '50vh', width: '100%' }}
+      style={{ height: '40vh', width: '100%' }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
