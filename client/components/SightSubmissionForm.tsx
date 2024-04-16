@@ -53,7 +53,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
       //Scroll to footer upon submit
       const successDiv = document.getElementById('footer')
       if (successDiv) {
-        successDiv.scrollIntoView({ behavior: 'smooth', block: 'end' })
+        successDiv.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
     },
     [provider, value, mutation, description, date, time, onFormSubmit],
