@@ -8,11 +8,7 @@ export function Nav() {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a href="/home" className="navbar-item">
-          <img
-            className="image"
-            src="../images/logo1.png"
-            alt="Drop Bear Logo"
-          />
+          <img src="../images/logo1.png" alt="Drop Bear Logo" />
         </a>
 
         <button
