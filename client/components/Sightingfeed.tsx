@@ -10,7 +10,7 @@ export default function Sightingfeed() {
         {data &&
           data.map((sighting) =>
             sighting.is_approved ? (
-              <div className="card" key={sighting.id}>
+              <div id={`id${sighting.id}`} className="card" key={sighting.id}>
                 <Link to={`/home/location/${sighting.display_name}`}>
                   <header className="card-header">
                     <p className="card-header-title">{sighting.display_name}</p>
