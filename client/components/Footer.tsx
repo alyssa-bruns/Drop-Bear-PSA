@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="columns">
         <div className="column is-three-fifths is-offset-one-fifth">
           <div className="content has-text-centered">

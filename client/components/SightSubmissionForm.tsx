@@ -48,9 +48,14 @@ export default function SightSubmissionForm() {
       setDescription('')
       setDate('')
       setTime('')
-      navigate('/home')
+      // window.location.href = `/home#idfooter`
+
+      const successDiv = document.getElementById('footer')
+      if (successDiv) {
+        successDiv.scrollIntoView({ behavior: 'smooth', block: 'end' })
+      }
     },
-    [mutation, description, date, navigate, provider, value, time],
+    [provider, value, mutation, description, date, time],
   )
 
   const getSuggestions = async (value: string) => {
