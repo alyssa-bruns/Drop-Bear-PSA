@@ -13,7 +13,7 @@ import { TouristSafety } from './components/Safety'
 import { LandingPage } from './components/LandingPage'
 import SightingsByLocation from './components/SightingsByLocation'
 
-const router = createBrowserRouter(
+const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/home" element={<App />}>
@@ -32,4 +32,4 @@ const router = createBrowserRouter(
   ),
 )
 
-export default router
+export default routes
