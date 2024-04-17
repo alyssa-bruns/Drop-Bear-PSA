@@ -95,10 +95,10 @@ export default function SightSubmissionForm({ onFormSubmit }) {
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form id="report" onSubmit={handleSubmit}>
           <div className="field is-horizontal">
             <div className="field-label">
-              <label className="label has-text-left" htmlFor="display_name">
+              <label className="label has-text-left" htmlFor="location">
                 Location:{' '}
               </label>
               <div className="input">
@@ -110,6 +110,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
                   getSuggestionValue={(suggestion) => suggestion}
                   renderSuggestion={(suggestion) => <div>{suggestion}</div>}
                   inputProps={inputProps}
+                  id="location"
                 />
               </div>
             </div>
