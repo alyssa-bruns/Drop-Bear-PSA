@@ -31,7 +31,7 @@ export default function SightingsByLocation() {
                 {data &&
                   data.map((sighting) =>
                     sighting.is_approved ? (
-                      <div className="card" key={sighting.id}>
+                      <div className="card card-bg" key={sighting.id}>
                         <header className="card-header">
                           <p className="card-header-title">
                             {sighting.display_name}

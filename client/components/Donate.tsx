@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -27,19 +28,24 @@ export function Donate() {
               <br />
               <br />
               {/* Start card 1 */}
-              <div id="alyssa" className="columns  is-centered card">
+              <div
+                id="alyssa"
+                className="columns .card-bg is-centered card card-bg"
+              >
                 <div className="column has-text-centered">
-                  <div className="columns is-mobile is-centered is-vcentered">
+                  <div className="columns is-mobile is-centered is-vcentered card-header">
                     <div className="column is-one-third"> </div>
                     <div className="column is-one-third has-text-centered ">
-                      <header className="card-header-title ">
-                        Wild Work Aotearoa
-                      </header>
+                      <Link to="https://www.aucklandzoo.co.nz/" target="_blank">
+                        <header className="card-header-title link-styles is-size-4">
+                          Wild Work Aotearoa
+                        </header>
+                      </Link>
                     </div>
                     <div className="column is-one-third has-text-centered">
                       <div>
                         <Link
-                          to="https://www.aucklandzoo.co.nz/"
+                          to="https://www.aucklandzoo.co.nz/get-involved/donate-wild-work-aotearoa"
                           target="_blank"
                         >
                           <img
@@ -86,23 +92,28 @@ export function Donate() {
               </div>
               <br />
               {/* Start card 2 */}
-              <div id="mae" className="columns  is-centered card">
+              <div
+                id="mae"
+                className="columns .card-bg is-centered card card-bg"
+              >
                 <div className="column has-text-centered">
-                  <div className="columns is-mobile is-centered is-vcentered">
+                  <div className="columns cis-mobile is-centered is-vcentered card-header">
                     <div className="column is-one-third"> </div>
                     <div className="column is-one-third has-text-centered ">
-                      <header className="card-header-title">
-                        World Wildlife Foundation
-                      </header>
+                      <Link target="_blank" to="https://wwf.org.nz/">
+                        <header className="card-header-title link-styles is-size-4">
+                          World Wildlife Foundation
+                        </header>
+                      </Link>
                     </div>
                     <div className="column is-one-third has-text-centered">
                       <div>
-                        <Link target="_blank" to="https://wwf.org.nz/">
+                        <Link target="_blank" to="https://wwf.org.nz/donate">
                           <img
                             alt="WWF logo"
                             src="../images/donation/wwf-logo.png"
                             className="image is-16by9 is-inline-block theme-light"
-                            width={200}
+                            width={100}
                           />
                         </Link>
                       </div>
@@ -117,7 +128,7 @@ export function Donate() {
                       </strong>
                     </div>
                   </div>
-                  <div className="column card-content">
+                  <div className="column card-content card-bg">
                     <p>
                       WWF New Zealand (World Wide Fund for Nature) is a
                       prominent conservation organization dedicated to
@@ -146,26 +157,28 @@ export function Donate() {
               </div>
               <br />
               {/* Start card 3 */}
-              <div id="keanu" className="columns  is-centered card">
+              <div id="keanu" className="columns is-centered card card-bg ">
                 <div className="column has-text-centered">
-                  <div className="columns is-mobile is-centered is-vcentered">
+                  <div className="columns is-mobile is-centered is-vcentered card-header">
                     <div className="column is-one-third"> </div>
                     <div className="column is-one-third has-text-centered ">
-                      <header className="card-header-title">
-                        Friends of the Koala
-                      </header>
+                      <Link target="_blank" to="https://friendsofthekoala.org/">
+                        <header className="card-header-title link-styles is-size-4">
+                          Friends of the Koala
+                        </header>
+                      </Link>
                     </div>
                     <div className="column is-one-third has-text-centered">
                       <div>
                         <Link
                           target="_blank"
-                          to="https://friendsofthekoala.org/"
+                          to="https://friendsofthekoala.org/save-koalas/donate/"
                         >
                           <img
                             alt="Friends of the Koala logo"
                             src="../images/donation/fotk-logo.png"
                             className="image is-3by2 is-inline-block theme-light"
-                            width={200}
+                            width={100}
                           />
                         </Link>
                       </div>
@@ -180,7 +193,7 @@ export function Donate() {
                       </strong>
                     </div>
                   </div>
-                  <div className="column card-content">
+                  <div className="column card-content ">
                     <p>
                       Friends of the Koala is a non-profit organization
                       dedicated to the conservation and welfare of koalas in
