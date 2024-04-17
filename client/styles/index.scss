@@ -76,7 +76,16 @@ body {
   color: white !important;
 }
 
+#navbarBasicExample {
+  background-color: #535c68;
+}
+
 .map {
+  border-radius: 25px;
+}
+
+.hero {
+  background-color: #ffbe76;
   border-radius: 25px;
 }
 
@@ -138,6 +147,7 @@ $footer-padding: 3rem 1.5rem 3rem;
 .footer {
   padding: $footer-padding;
 }
+
 
 .link-styles {
   // color: #ffbe76;
