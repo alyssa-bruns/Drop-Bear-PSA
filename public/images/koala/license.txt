@@ -1,0 +1,11 @@
+Model Information:
+* title:	Koala
+* source:	https://sketchfab.com/3d-models/koala-25c91530364a435cb18f452a05bf08c4
+* author:	Kapao (https://sketchfab.com/supachailllpay)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Koala" (https://sketchfab.com/3d-models/koala-25c91530364a435cb18f452a05bf08c4) by Kapao (https://sketchfab.com/supachailllpay) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
