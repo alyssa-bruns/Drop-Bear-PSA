@@ -37,9 +37,7 @@ describe('<Sightingfeed/>', () => {
 
     renderRoute('/home')
 
-    const displayName = await screen.findByText(
-      'Daintree Rainforest, Queensland, Australia',
-    )
+    const displayName = await screen.findByText('Education')
     expect(displayName).toBeVisible()
 
     expect(scope.isDone()).toBe(true)
