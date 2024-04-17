@@ -92,10 +92,8 @@ body {
 @media screen and (max-width: 1010px) {
   .navbar-brand .navbar-item {
     // display: flex;
-    margin-left: 38%
+    margin-left: 38%;
   }
-  
-
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -105,8 +103,6 @@ body {
     }
   }
 }
-  
-
 
 // STYLING AUTOSUGGESTIONS BELOW
 
@@ -153,3 +149,15 @@ $footer-padding: 3rem 1.5rem 3rem;
 }
 
 
+.link-styles {
+  // color: #ffbe76;
+  color: #f0932b;
+}
+
+.card-bg {
+  background-color: #efefef;
+}
+
+// .card {
+//   background-color: #95afc0;
+// }

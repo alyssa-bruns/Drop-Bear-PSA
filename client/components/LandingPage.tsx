@@ -9,7 +9,7 @@ export function LandingPage() {
         <div className="centered">
           <img src="../images/logo1.png" alt="logo" />
           <Link
-            className="button  is-inverted is-large is-success is-responsive"
+            className="button is-large is-responsive is-outlined is-light"
             to="/home"
           >
             Enter
