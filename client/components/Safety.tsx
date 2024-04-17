@@ -170,38 +170,38 @@ export function TouristSafety() {
 
                 <div className="block">
                   {' '}
-                  <h3 className="has-text-weight-semibold">
-                    In the event of a Drop bear attack
+                  <h3 className="has-text-weight-semibold has-text-centered">
+                    In the event of a Drop bear attack, remember the GRASS
+                    method!
                   </h3>
                 </div>
 
-                <div className="block">
-                  <p>Remember these essential steps!</p>
-                </div>
-
-                <div className="block">
-                  <ul>
-                    <li>
-                      <strong>G - Giggle</strong> excessively while making eye
-                      contact. It makes drop bears uncomfortable.
-                    </li>
-                    <li>
-                      <strong>R - Romance</strong> the drop bear into submission
-                    </li>
-                    <li>
-                      <strong>A - Attempt</strong> to escape (You cant win this
-                      one mate.)
-                    </li>
-                    <li>
-                      <strong>S - Sacrifice</strong> the smallest member of your
-                      group
-                    </li>
-                    <li>
-                      <strong>S - Salvage</strong> whatever remaining pride you
-                      have left. (You just got beaten up by an oversized rat.)
-                    </li>
-                  </ul>
-                </div>
+                <section className="hero grasshero is-small has-text-centered mb-4">
+                  <div className="hero-body">
+                    <p className="title">G.R.A.S.S.</p>
+                    <div className="has-text-left">
+                      <p className="subtitle">
+                        <strong>Giggle</strong> excessively while making eye
+                        contact. It makes drop bears uncomfortable.
+                      </p>
+                      <p className="subtitle">
+                        <strong>Romance</strong> the drop bear into submission
+                      </p>
+                      <p className="subtitle">
+                        <strong>Attempt</strong> to escape (You cant win this
+                        one mate.)
+                      </p>
+                      <p className="subtitle">
+                        <strong>Sacrifice</strong> the smallest member of your
+                        group
+                      </p>
+                      <p className="subtitle">
+                        <strong>Salvage</strong> whatever remaining pride you
+                        have left. (You just got beaten up by an oversized rat.)
+                      </p>
+                    </div>
+                  </div>
+                </section>
 
                 <div className="block">
                   <p>
