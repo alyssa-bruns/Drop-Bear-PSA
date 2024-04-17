@@ -94,6 +94,10 @@ body {
     .react-autosuggest__suggestions-container {
       background-color: black;
     }
+
+    .card {
+      background-color: rgb(30, 30, 32);
+    }
   }
 }
   
@@ -145,11 +149,7 @@ $footer-padding: 3rem 1.5rem 3rem;
 
 
 .link-styles {
-  // color: #ffbe76;
+  
   color: #f0932b;
 
 }
-
-// .card {
-//   background-color: #95afc0;
-// }
