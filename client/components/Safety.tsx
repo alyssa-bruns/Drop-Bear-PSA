@@ -14,14 +14,14 @@ export function TouristSafety() {
         >
           <div className="columns ">
             <div className="column is-three-fifths is-offset-one-fifth">
-              <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
+              <h1 className="is-size-2 has-text-centered has-text-weight-bold block mt-5">
                 Tourist Safety
-              </h2>
+              </h1>
 
               <div className="block column">
-                <h3 className="is-size-4 has-text-centered">
+                <h2 className="is-size-4 has-text-centered">
                   Drop bears! Cute and Cuddly or Creatures of Chaos?
-                </h3>
+                </h2>
               </div>
 
               <div className="block column">
@@ -102,37 +102,37 @@ export function TouristSafety() {
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">
                       Avoid High-Risk Areas:
                     </p>{' '}
                     If possible, steer clear of dense forested areas, especially
                     during dusk and dawn when Drop Bears are most active
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">Stick Together:</p>{' '}
                     There is safety in numbers! While exploring the great
                     outdoors, its wise to travel in groups as they scare drop
                     bears away. The Drop Bear is famously anti-social and has
                     crippling social anxiety.
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">Stay Vigilant:</p>{' '}
                     Be on the look out for any suspicious rustling or movement
                     from the trees above. Drop bears will leave you alone if you
                     force them to make unnecessarily long or uncomfortably
                     intimate eye contact.
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">
                       Imitate The Locals:
                     </p>{' '}
@@ -142,20 +142,20 @@ export function TouristSafety() {
                     are Australian. It's important to note that if a drop bear
                     discovers your accent is fake they will become violent,
                     almost demonically so.
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">Mask Your Scent:</p>{' '}
                     Like most animals, the drop bear has a strong sense of
                     smell, they can sniff out a tourist over a kilometer away.
                     To protect yourself rub a bit of vegemite behind your ear.
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
-                  <p>
+                  <div>
                     <p className="has-text-weight-semibold">
                       {' '}
                       Wearing Protective Gear:{' '}
@@ -165,7 +165,7 @@ export function TouristSafety() {
                     can include spiked helmets also known as Pickelhaubes. For a
                     more cost effective solution weaving sharpened forks into
                     your hair is highly recommended by locals.
-                  </p>
+                  </div>
                 </div>
 
                 <div className="block">
@@ -178,7 +178,7 @@ export function TouristSafety() {
 
                 <section className="hero grasshero is-small has-text-centered mb-4">
                   <div className="hero-body">
-                    <p className="title">G.R.A.S.S.</p>
+                    <h4 className="title">G.R.A.S.S.</h4>
                     <div className="has-text-left">
                       <p className="subtitle">
                         <strong className="subtitle">Giggle</strong> excessively

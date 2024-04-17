@@ -16,9 +16,9 @@ export function Donate() {
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
               <div className="column">
-                <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
+                <h1 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
                   Donate
-                </h2>
+                </h1>
                 <p>
                   While they can give you a bite or a fright, even Drop Bears
                   deserve protection. Here at Drop Bear PSA, we believe in

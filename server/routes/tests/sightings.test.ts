@@ -17,22 +17,24 @@ afterAll(() => {
 const mockSightings = [
   {
     id: 1,
-    location: 'Grampians National Park, Victoria, Australia',
-    date: '2024-04-10',
-    time: '21:00:00',
+    display_name: 'Grampians National Park, Victoria, Australia',
+    lat: -37.4154116,
+    lon: 142.43338307147962,
+    date: '10-04-2024',
+    time: '21:00',
     description:
       "The crackle of the campfire and the laughter of my friends filled the air as we sat beneath the starry outback sky. Lost in the warmth of camaraderie, I didn't notice the subtle rustle in the trees above. Suddenly, a dark shape plummeted from the canopy, landing amidst our circle with a menacing growl. My heart pounded as I scrambled to escape its grasp, the adrenaline-fueled sprint through the forest a harrowing reminder of the dangers lurking in the night.",
-    email: 'example1@email.com',
     is_approved: true,
   },
   {
     id: 2,
-    location: 'Blue Mountains National Park, New South Wales, Australia',
-    date: '2024-04-11',
-    time: '13:30:00',
+    display_name: 'Blue Mountains National Park, New South Wales, Australia',
+    lat: -33.6152,
+    lon: 150.4179,
+    date: '11-04-2024',
+    time: '13:30',
     description:
       'Each step through the bush felt like a triumph, until a sudden thud shattered my confidence. Looking up, I was met with the chilling sight of a drop bear poised to strike. With lightning reflexes, I dodged its descent, my pulse racing as I fled through the dense undergrowth. The memory of those piercing eyes haunted me long after the encounter had passed, a stark reminder of the perilous beauty of the Australian wilderness.',
-    email: 'example2@email.com',
     is_approved: true,
   },
 ]
