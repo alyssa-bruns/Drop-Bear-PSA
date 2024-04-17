@@ -15,18 +15,21 @@ export function Donate() {
         >
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
-              <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
-                Donate
-              </h2>
-              <p>
-                While they can give you a bite or a fright, even Drop Bears
-                deserve protection. Here at Drop Bear PSA, we believe in caring
-                for all animals - scary or sweet. Please consider donating to
-                one of the following organizations dedicated to caring and
-                protecting our animals here, in Aotearoa, and around the world.
-              </p>
-              <br />
-              <br />
+              <div className="column">
+                <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
+                  Donate
+                </h2>
+                <p>
+                  While they can give you a bite or a fright, even Drop Bears
+                  deserve protection. Here at Drop Bear PSA, we believe in
+                  caring for all animals - scary or sweet. Please consider
+                  donating to one of the following organizations dedicated to
+                  caring and protecting our animals here, in Aotearoa, and
+                  around the world.
+                </p>
+                <br />
+                <br />
+              </div>
               {/* Start card 1 */}
               <div
                 id="alyssa"
@@ -35,7 +38,7 @@ export function Donate() {
                 <div className="column has-text-centered">
                   <div className="columns is-mobile is-centered is-vcentered card-header">
                     <div className="column is-one-third"> </div>
-                    <div className="column is-one-third has-text-centered ">
+                    <div className="column is-one-third  ">
                       <Link to="https://www.aucklandzoo.co.nz/" target="_blank">
                         <header className="card-header-title link-styles is-size-4">
                           Wild Work Aotearoa
@@ -90,6 +93,7 @@ export function Donate() {
                   </div>
                 </div>
               </div>
+
               <br />
               {/* Start card 2 */}
               <div
@@ -230,8 +234,8 @@ export function Donate() {
                   </div>
                 </div>
               </div>
-              <br />
             </div>
+            <br />
           </div>
         </motion.div>
       </AnimatePresence>
