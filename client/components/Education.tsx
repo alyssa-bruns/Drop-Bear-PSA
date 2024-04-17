@@ -14,14 +14,14 @@ export function EducationalRes() {
         >
           <div className="columns">
             <div className="column is-three-fifths is-offset-one-fifth">
-              <h2 className="is-size-3 has-text-centered has-text-weight-bold block mt-3">
+              <h1 className="is-size-2 has-text-centered has-text-weight-bold block mt-5">
                 Education
-              </h2>
+              </h1>
 
               <div className="block">
-                <h3 className="is-size-4 has-text-centered">
+                <h2 className="is-size-4 has-text-centered">
                   Learn more about the elusive Thylarctos plummetus
-                </h3>
+                </h2>
               </div>
 
               <div className="column">
