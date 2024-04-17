@@ -7,7 +7,7 @@ export default function Sightingfeed() {
   return (
     <>
       <ul>
-        <div>
+        <div data-testid="map-container">
           {data &&
             data.map((sighting) =>
               sighting.is_approved ? (
