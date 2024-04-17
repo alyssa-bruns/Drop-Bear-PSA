@@ -96,7 +96,7 @@ export function TouristSafety() {
                 </div>
 
                 <div className="block">
-                  <h3 className=" is-size-3 has-text-centered">
+                  <h3 className=" is-size-4 has-text-centered">
                     How to keep yourself safe from drop bears
                   </h3>
                 </div>
