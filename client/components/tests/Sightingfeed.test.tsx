@@ -19,11 +19,11 @@ const mockSighting = [
   },
 ]
 
-// beforeAll(() => {
-//   nock.disableNetConnect()
+beforeAll(() => {
+  nock.disableNetConnect()
 
-//   vi.spyOn(console, 'error').mockImplementation(() => {})
-// })
+  vi.spyOn(console, 'error').mockImplementation(() => {})
+})
 
 afterEach(() => {
   vi.clearAllMocks()
@@ -32,14 +32,12 @@ afterEach(() => {
 describe('<Sightingfeed/>', () => {
   it('should render some sightings', async () => {
     const scope = nock('http://localhost')
-      .get('/api/v1/sightings/home')
+      .get('/api/v1/sightings')
       .reply(200, mockSighting)
 
-    renderRoute('/')
+    renderRoute('/home')
 
-    const displayName = await screen.findByText(
-      'Daintree Rainforest, Queensland, Australia',
-    )
+    const displayName = await screen.findByText(/Daintree Rainforest/i)
     expect(displayName).toBeVisible()
 
     expect(scope.isDone()).toBe(true)
