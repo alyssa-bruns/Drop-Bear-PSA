@@ -1,9 +1,19 @@
 import { useRef } from 'react'
 import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
+import { Icon } from 'leaflet'
+import iconPng from 'leaflet/dist/images/marker-icon.png'
+import shadowPng from 'leaflet/dist/images/marker-shadow.png'
+
 import 'leaflet/dist/leaflet.css'
 import { useGetAllSightings } from '../hooks/use-get-sightings'
 import FindSubmission from './FindSubmission'
 
+const icon = new Icon({
+  iconUrl: iconPng,
+  shadowUrl: shadowPng,
+})
+
+console.log({ iconPng, shadowPng })
 const Map = () => {
   const { data: sightings = [], isLoading, isError } = useGetAllSightings()
   const mapRef = useRef(null)
@@ -28,7 +38,11 @@ const Map = () => {
 
       {sightings.map((sighting) =>
         sighting.is_approved ? (
-          <Marker key={sighting.id} position={[sighting.lat, sighting.lon]}>
+          <Marker
+            icon={icon}
+            key={sighting.id}
+            position={[sighting.lat, sighting.lon]}
+          >
             <Popup>
               <div>
                 <h3>{sighting.display_name}</h3>
