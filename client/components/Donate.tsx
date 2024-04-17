@@ -237,6 +237,7 @@ export function Donate() {
             </div>
             <br />
           </div>
+          <br />
         </motion.div>
       </AnimatePresence>
     </>
