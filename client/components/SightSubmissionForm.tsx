@@ -90,7 +90,7 @@ export default function SightSubmissionForm({ onFormSubmit }) {
     placeholder: 'Search for a location...',
     value,
     onChange: onChange,
-    required: 'true',
+    required: true,
   }
   return (
     <>
