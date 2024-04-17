@@ -101,6 +101,25 @@ body {
     .react-autosuggest__suggestions-container {
       background-color: black;
     }
+
+    .card {
+      background-color: rgb(30, 30, 32);
+    }
+
+    .hero {
+background-color: #bc7524;  
+
+    }
+
+    .subtitle  {
+      color: black
+    }
+
+    .title  {
+      color: black
+    }
+
+  
   }
 }
 
@@ -150,14 +169,11 @@ $footer-padding: 3rem 1.5rem 3rem;
 
 
 .link-styles {
-  // color: #ffbe76;
-  color: #ff8800;
+  
+  color: #f0932b;
 }
 
 .card-bg {
   background-color: #efefef;
 }
 
-// .card {
-//   background-color: #95afc0;
-// }

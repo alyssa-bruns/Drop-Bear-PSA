@@ -181,23 +181,26 @@ export function TouristSafety() {
                     <h4 className="title">G.R.A.S.S.</h4>
                     <div className="has-text-left">
                       <p className="subtitle">
-                        <strong>Giggle</strong> excessively while making eye
-                        contact. It makes drop bears uncomfortable.
+                        <strong className="subtitle">Giggle</strong> excessively
+                        while making eye contact. It makes drop bears
+                        uncomfortable.
                       </p>
                       <p className="subtitle">
-                        <strong>Romance</strong> the drop bear into submission
+                        <strong className="subtitle">Romance</strong> the drop
+                        bear into submission
                       </p>
                       <p className="subtitle">
-                        <strong>Attempt</strong> to escape (You cant win this
-                        one mate.)
+                        <strong className="subtitle">Attempt</strong> to escape
+                        (You cant win this one mate.)
                       </p>
                       <p className="subtitle">
-                        <strong>Sacrifice</strong> the smallest member of your
-                        group
+                        <strong className="subtitle">Sacrifice</strong> the
+                        smallest member of your group
                       </p>
                       <p className="subtitle">
-                        <strong>Salvage</strong> whatever remaining pride you
-                        have left. (You just got beaten up by an oversized rat.)
+                        <strong className="subtitle">Salvage</strong> whatever
+                        remaining pride you have left. (You just got beaten up
+                        by an oversized rat.)
                       </p>
                     </div>
                   </div>
