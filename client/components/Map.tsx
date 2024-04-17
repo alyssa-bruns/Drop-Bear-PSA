@@ -13,7 +13,6 @@ const icon = new Icon({
   shadowUrl: shadowPng,
 })
 
-console.log({ iconPng, shadowPng })
 const Map = () => {
   const { data: sightings = [], isLoading, isError } = useGetAllSightings()
   const mapRef = useRef(null)

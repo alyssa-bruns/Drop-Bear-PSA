@@ -15,8 +15,6 @@ vi.mock('@react-three/fiber')
 vi.mock('@react-three/postprocessing')
 
 export function renderRoute(location: string) {
-  const user = userEvent.setup()
-
   const router = createMemoryRouter(routes, {
     initialEntries: [location],
   })
@@ -29,10 +27,11 @@ export function renderRoute(location: string) {
     },
   })
 
-  const container = render(
+  const user = userEvent.setup()
+  const screen = render(
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>,
   )
-  return { user, ...container }
+  return { user, ...screen }
 }
