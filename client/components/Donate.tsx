@@ -96,12 +96,9 @@ export function Donate() {
 
               <br />
               {/* Start card 2 */}
-              <div
-                id="mae"
-                className="columns .card-bg is-centered card card-bg"
-              >
+              <div id="mae" className="columns is-centered card card-bg">
                 <div className="column has-text-centered">
-                  <div className="columns cis-mobile is-centered is-vcentered card-header">
+                  <div className="columns is-mobile is-centered is-vcentered card-header">
                     <div className="column is-one-third"> </div>
                     <div className="column is-one-third has-text-centered ">
                       <Link target="_blank" to="https://wwf.org.nz/">
@@ -132,7 +129,7 @@ export function Donate() {
                       </strong>
                     </div>
                   </div>
-                  <div className="column card-content card-bg">
+                  <div className="column card-content">
                     <p>
                       WWF New Zealand (World Wide Fund for Nature) is a
                       prominent conservation organization dedicated to
