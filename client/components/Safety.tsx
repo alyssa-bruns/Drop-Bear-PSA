@@ -14,14 +14,14 @@ export function TouristSafety() {
         >
           <div className="columns ">
             <div className="column is-three-fifths is-offset-one-fifth">
-              <h2 className="is-size-2 has-text-centered has-text-weight-bold block mt-3">
+              <h1 className="is-size-2 has-text-centered has-text-weight-bold block mt-5">
                 Tourist Safety
-              </h2>
+              </h1>
 
               <div className="block column">
-                <h3 className="is-size-4 has-text-centered">
+                <h2 className="is-size-4 has-text-centered">
                   Drop bears! Cute and Cuddly or Creatures of Chaos?
-                </h3>
+                </h2>
               </div>
 
               <div className="block column">
@@ -178,7 +178,7 @@ export function TouristSafety() {
 
                 <section className="hero grasshero is-small has-text-centered mb-4">
                   <div className="hero-body">
-                    <p className="title">G.R.A.S.S.</p>
+                    <h4 className="title">G.R.A.S.S.</h4>
                     <div className="has-text-left">
                       <p className="subtitle">
                         <strong>Giggle</strong> excessively while making eye
