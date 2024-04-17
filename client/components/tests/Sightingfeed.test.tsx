@@ -32,12 +32,14 @@ afterEach(() => {
 describe('<Sightingfeed/>', () => {
   it('should render some sightings', async () => {
     const scope = nock('http://localhost')
-      .get('/api/v1/sightings/')
+      .get('/api/v1/sightings/home')
       .reply(200, mockSighting)
 
-    renderRoute('/home')
+    renderRoute('/')
 
-    const displayName = await screen.findByText('Education')
+    const displayName = await screen.findByText(
+      'Daintree Rainforest, Queensland, Australia',
+    )
     expect(displayName).toBeVisible()
 
     expect(scope.isDone()).toBe(true)
